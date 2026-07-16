@@ -30,10 +30,10 @@ export default function Footer() {
                     <div className="space-y-6">
                         <h4 className="text-lg font-black uppercase tracking-widest text-blue-200">Services</h4>
                         <ul className="space-y-4 text-blue-100/70 font-medium">
-                            <li><a href="#" className="hover:text-white transition-colors">Blood Tests</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors">DNA Analysis</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors">Corporate Wellness</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors">Health Packages</a></li>
+                            <li><a href="/services" className="hover:text-white transition-colors">Blood Tests</a></li>
+                            <li><a href="/services" className="hover:text-white transition-colors">DNA Analysis</a></li>
+                            <li><a href="/services" className="hover:text-white transition-colors">Corporate Wellness</a></li>
+                            <li><a href="/services" className="hover:text-white transition-colors">Health Packages</a></li>
                         </ul>
                     </div>
 
@@ -41,7 +41,7 @@ export default function Footer() {
                     <div className="space-y-6">
                         <h4 className="text-lg font-black uppercase tracking-widest text-blue-200">Company</h4>
                         <ul className="space-y-4 text-blue-100/70 font-medium">
-                            <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
+                            <li><a href="/about" className="hover:text-white transition-colors">About Us</a></li>
                             <li><a href="#" className="hover:text-white transition-colors">Career</a></li>
                             <li><a href="#" className="hover:text-white transition-colors">Patient Portal</a></li>
                             <li><a href="#" className="hover:text-white transition-colors">FAQ</a></li>
