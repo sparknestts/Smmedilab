@@ -7,10 +7,10 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
   { href: "/services", label: "Services" },
-  { href: "#", label: "Branches" },
-  { href: "#", label: "Contact" },
-  { href: "#", label: "Blog" },
-  { href: "#", label: "Gallery" },
+  { href: "/branches", label: "Branches" },
+  { href: "/contact", label: "Contact" },
+  { href: "/blog", label: "Blog" },
+  { href: "/gallery", label: "Gallery" },
 ];
 
 export default function Header() {

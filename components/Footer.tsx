@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Footer() {
     return (
         <footer className="bg-[#002b5c] text-white pt-20 pb-8 px-6 md:px-12 lg:px-24 border-t border-white/5">
@@ -43,7 +41,7 @@ export default function Footer() {
                         <ul className="space-y-4 text-blue-100/70 font-medium">
                             <li><a href="/about" className="hover:text-white transition-colors">About Us</a></li>
                             <li><a href="#" className="hover:text-white transition-colors">Career</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors">Patient Portal</a></li>
+                            <li><a href="/contact" className="hover:text-white transition-colors">Patient Portal</a></li>
                             <li><a href="#" className="hover:text-white transition-colors">FAQ</a></li>
                         </ul>
                     </div>
