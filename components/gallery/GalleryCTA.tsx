@@ -1,7 +1,7 @@
 export default function GalleryCTA() {
   return (
-    <section className="py-12 md:py-16 lg:py-20 px-6 md:px-12 lg:px-24 bg-[#002b5c]">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-12 md:py-16 lg:py-20 px-6 md:px-12 lg:px-[10px] bg-[#002b5c]">
+      <div className="max-w-7xl mx-auto lg:max-w-none lg:mx-0 lg:px-[20px]">
         <div className="relative overflow-hidden rounded-[28px] md:rounded-[32px] bg-[#002b5c] px-8 md:px-12 lg:px-16 py-10 md:py-14">
           <div
             className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none"

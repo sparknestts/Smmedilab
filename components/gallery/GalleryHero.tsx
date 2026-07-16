@@ -2,8 +2,8 @@ import { galleryStats } from "@/data/gallery";
 
 export default function GalleryHero() {
   return (
-    <section className="pt-10 md:pt-14 lg:pt-16 pb-10 md:pb-12 px-6 md:px-12 lg:px-24 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section className="pt-10 md:pt-14 lg:pt-16 pb-10 md:pb-12 px-6 md:px-12 lg:px-[10px] bg-white">
+      <div className="max-w-7xl mx-auto lg:max-w-none lg:mx-0 lg:px-[20px]">
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 lg:gap-16">
           <div className="flex-1 max-w-2xl">
             <p className="text-[#4a90e2] font-bold text-xs md:text-sm tracking-[0.2em] uppercase mb-4">

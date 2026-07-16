@@ -10,8 +10,8 @@ export default function GalleryGrid() {
   const progressPercent = (visibleGalleryItems / totalGalleryItems) * 100;
 
   return (
-    <section className="pb-12 md:pb-16 px-6 md:px-12 lg:px-24 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section className="pb-12 md:pb-16 px-6 md:px-12 lg:px-[10px] bg-white">
+      <div className="max-w-7xl mx-auto lg:max-w-none lg:mx-0 lg:px-[20px]">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
           <GalleryImage
             item={galleryImages.labFeature}

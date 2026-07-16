@@ -34,8 +34,8 @@ export default function ServicesContent() {
           />
         </>
       ) : (
-        <section className="py-20 px-6 md:px-12 lg:px-24 bg-white">
-          <div className="max-w-7xl mx-auto text-center">
+        <section className="py-20 px-6 md:px-12 lg:px-[10px] bg-white">
+          <div className="max-w-7xl mx-auto lg:max-w-none lg:mx-0 lg:px-[20px] text-center">
             <p className="text-gray-500 text-lg font-medium">
               No services found in this category. Try a different filter or
               search term.

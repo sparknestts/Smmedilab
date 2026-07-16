@@ -14,8 +14,8 @@ export default function ServicesCTA() {
         <div className="absolute inset-0 bg-[#002b5c]/80" aria-hidden="true" />
       </div>
 
-      <div className="relative z-10 py-16 md:py-20 lg:py-24 px-6 md:px-12 lg:px-24">
-        <div className="max-w-7xl mx-auto">
+      <div className="relative z-10 py-16 md:py-20 lg:py-24 px-6 md:px-12 lg:px-[10px]">
+        <div className="max-w-7xl mx-auto lg:max-w-none lg:mx-0 lg:px-[20px]">
           <div className="max-w-2xl space-y-5 md:space-y-6">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight">
               Can&apos;t find what you&apos;re looking for?

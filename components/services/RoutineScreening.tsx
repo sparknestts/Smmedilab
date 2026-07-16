@@ -36,8 +36,8 @@ export default function RoutineScreening({
   if (filteredRoutine.length === 0 && !showFeatured) return null;
 
   return (
-    <section className="py-12 md:py-16 px-6 md:px-12 lg:px-24 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-12 md:py-16 px-6 md:px-12 lg:px-[10px] bg-white">
+      <div className="max-w-7xl mx-auto lg:max-w-none lg:mx-0 lg:px-[20px]">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-[#002b5c] mb-8 md:mb-10">
           Routine Screening
         </h2>
@@ -48,7 +48,8 @@ export default function RoutineScreening({
               {filteredRoutine.map((service) => (
                 <article
                   key={service.id}
-                  className="bg-white p-6 md:p-8 rounded-[24px] md:rounded-[28px] border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
+                  id={service.id}
+                  className="bg-white p-6 md:p-8 rounded-[24px] md:rounded-[8px] border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
                 >
                   <ServiceIcon colorClass={service.iconColor} />
                   <h3 className="mt-5 text-lg md:text-xl font-black text-[#002b5c]">
@@ -58,12 +59,12 @@ export default function RoutineScreening({
                     {service.description}
                   </p>
                   <div className="mt-6 flex items-center justify-between pt-4 border-t border-gray-50">
-                    <span className="text-[#28a745] font-black text-lg md:text-xl">
+                    <span className="text-[#006E25] font-black text-lg md:text-xl">
                       {service.price}
                     </span>
                     <a
                       href="#"
-                      className="text-[#4a90e2] font-bold text-sm hover:text-[#002b5c] transition-colors flex items-center gap-1"
+                      className="text-[#003F87] font-bold text-sm hover:text-[#002b5c] transition-colors flex items-center gap-1"
                     >
                       Book Now
                       <span aria-hidden="true">→</span>
@@ -76,7 +77,7 @@ export default function RoutineScreening({
 
           {showFeatured && (
             <aside
-              className={`bg-[#002b5c] text-white p-8 md:p-10 rounded-[28px] md:rounded-[32px] flex flex-col justify-between min-h-[400px] lg:min-h-0 order-1 lg:order-2 ${
+              className={`bg-[#002b5c] text-white p-8 md:p-10 rounded-[28px] md:rounded-[8px] flex flex-col justify-between min-h-[400px] lg:min-h-0 order-1 lg:order-2 ${
                 filteredRoutine.length === 0 ? "lg:col-span-3 max-w-2xl mx-auto w-full" : ""
               }`}
             >
@@ -113,7 +114,7 @@ export default function RoutineScreening({
               </div>
               <a
                 href="#"
-                className="mt-8 w-full text-center bg-white text-[#002b5c] font-bold py-4 rounded-xl hover:bg-gray-100 transition-colors"
+                className="mt-8 w-full text-center bg-white text-[#002b5c] font-bold py-4 rounded-sm hover:bg-gray-100 transition-colors"
               >
                 Request Appointment
               </a>

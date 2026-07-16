@@ -14,6 +14,7 @@ export interface RoutineService {
   price: string;
   category: ServiceCategory;
   iconColor: string;
+  height?: string;
 }
 
 export interface SpecializedService {
@@ -38,7 +39,7 @@ export const routineServices: RoutineService[] = [
     id: "cbc",
     title: "Complete Blood Count",
     description:
-      "Comprehensive hematology panel measuring red cells, white cells, and platelets.",
+      "A fundamental evaluation of overall health and detection of disorders like anemia or infection.",
     price: "$45.00",
     category: "routine",
     iconColor: "bg-[#f0f4ff]",
@@ -47,28 +48,10 @@ export const routineServices: RoutineService[] = [
     id: "lipid",
     title: "Lipid Profile",
     description:
-      "Full cholesterol and triglyceride assessment for cardiovascular health.",
+      "Comprehensive measurement of cholesterol and fats to assess cardiovascular risk levels.",
     price: "$55.00",
     category: "routine",
     iconColor: "bg-[#e7f9ee]",
-  },
-  {
-    id: "glucose",
-    title: "Glucose (Fasting)",
-    description:
-      "Baseline blood sugar screening for diabetes monitoring and prevention.",
-    price: "$25.00",
-    category: "routine",
-    iconColor: "bg-[#f0f9ff]",
-  },
-  {
-    id: "hba1c",
-    title: "HbA1c",
-    description:
-      "Three-month average glucose levels for long-term diabetes management.",
-    price: "$40.00",
-    category: "routine",
-    iconColor: "bg-[#f0f4ff]",
   },
 ];
 
