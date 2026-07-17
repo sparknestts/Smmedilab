@@ -40,36 +40,66 @@ export default function InteractiveMap() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
           <div className="lg:col-span-2 relative rounded-[28px] overflow-hidden bg-[#e8ecf0] h-[320px] sm:h-[400px] md:h-[460px]">
-            <svg
+            {/* Real Google Maps embed — SM MediLabs Jaffna Town */}
+            <iframe
+              title="SM MediLabs – Jaffna Town Location"
+              src="https://maps.google.com/maps?q=SM+MediLabs+Jaffna+Town&z=17&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
               className="absolute inset-0 w-full h-full"
-              viewBox="0 0 800 460"
-              preserveAspectRatio="xMidYMid slice"
-              aria-hidden="true"
-            >
-              <rect width="800" height="460" fill="#e8ecf0" />
-              <ellipse cx="400" cy="230" rx="280" ry="180" fill="#d5dce3" />
-              <ellipse cx="400" cy="230" rx="180" ry="120" fill="#c8d0d8" />
-              <path
-                d="M200 180 Q400 120 600 180 Q500 280 400 320 Q300 280 200 180"
-                fill="#b8c4ce"
-                opacity="0.6"
-              />
-            </svg>
+            />
 
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-full">
-              <div className="relative flex flex-col items-center">
-                <svg
-                  className="w-16 h-16 md:w-20 md:h-20 text-white drop-shadow-lg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                </svg>
-                <div className="mt-1 bg-[#0061C1] text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md whitespace-nowrap">
+            {/* Main Headquarters callout — floats above the red pin */}
+            <div
+              className="absolute pointer-events-none"
+              style={{ top: "35%", left: "50%", transform: "translateX(-50%) translateY(-100%)" }}
+            >
+              <div className="flex flex-col items-center">
+                <div className="flex items-center gap-1.5 bg-white text-[#002b5c] text-[11px] font-bold px-3 py-1.5 rounded-lg shadow-[0_2px_10px_rgba(0,0,0,0.25)] border border-gray-200 whitespace-nowrap">
+                  <svg className="w-3.5 h-3.5 text-[#0061C1] shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
                   Main Headquarters
                 </div>
+                <div
+                  style={{
+                    width: 0,
+                    height: 0,
+                    borderLeft: "6px solid transparent",
+                    borderRight: "6px solid transparent",
+                    borderTop: "7px solid white",
+                    filter: "drop-shadow(0 2px 2px rgba(0,0,0,0.15))",
+                  }}
+                />
               </div>
             </div>
+
+            {/* Open in Maps link */}
+            <a
+              href="https://maps.app.goo.gl/1L43egCcgGwABbp49"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute top-4 right-4 flex items-center gap-1.5 bg-white/90 backdrop-blur-sm text-[#0061C1] text-xs font-bold px-3 py-2 rounded-xl shadow-lg border border-white/60 hover:bg-white transition-colors"
+            >
+              <svg
+                className="w-3.5 h-3.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
+              Open in Maps
+            </a>
           </div>
 
           <aside className="bg-white rounded-[28px] border border-gray-100 shadow-sm p-6 md:p-8 flex flex-col">
@@ -119,11 +149,10 @@ export default function InteractiveMap() {
                     key={filter.id}
                     type="button"
                     onClick={() => setServiceFilter(filter.id)}
-                    className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${
-                      serviceFilter === filter.id
-                        ? "bg-[#002b5c] text-white"
-                        : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                    }`}
+                    className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${serviceFilter === filter.id
+                      ? "bg-[#002b5c] text-white"
+                      : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                      }`}
                   >
                     {filter.label}
                   </button>
