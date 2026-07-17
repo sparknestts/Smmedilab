@@ -133,7 +133,7 @@ export default function InteractiveMap() {
 
             <button
               type="button"
-              className="mt-auto w-full bg-[#002b5c] hover:bg-[#003d7a] text-white font-bold py-4 rounded-xl transition-colors"
+              className="mt-auto w-full bg-[#0056B3] hover:bg-[#003d7a] text-white font-bold py-4 rounded-xl transition-colors"
             >
               Locate Nearest Branch
               {filteredCount > 0 && (

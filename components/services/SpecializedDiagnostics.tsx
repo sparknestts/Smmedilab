@@ -27,7 +27,7 @@ export default function SpecializedDiagnostics({
   if (filtered.length === 0) return null;
 
   return (
-    <section className="py-12 md:py-16 px-6 md:px-12 lg:px-[10px] bg-[#f8fafc]">
+    <section className="py-12 md:py-16 px-6 md:px-12 lg:px-[10px] bg-[#FFFFFF]">
       <div className="max-w-7xl mx-auto lg:max-w-none lg:mx-0 lg:px-[20px]">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-[#002b5c] mb-8 md:mb-10">
           Specialized Diagnostics
@@ -37,15 +37,15 @@ export default function SpecializedDiagnostics({
           {filtered.map((service) => (
             <article
               key={service.id}
-              className="bg-white border-l-4 border-[#002b5c] p-6 md:p-7 rounded-r-2xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col min-h-[200px]"
+              className="bg-[#F3F4F5] border-l-4 border-[#002b5c] p-6 md:p-7 rounded-r-lg shadow-sm hover:shadow-md transition-all duration-300 flex flex-col min-h-[200px]"
             >
-              <h3 className="text-base md:text-lg font-black text-[#002b5c] leading-snug">
+              <h3 className="text-base md:text-lg font-black text-[#191C1D] leading-snug">
                 {service.title}
               </h3>
-              <p className="mt-3 text-gray-500 text-sm leading-relaxed flex-grow">
+              <p className="mt-3 text-[#424752] text-sm leading-relaxed flex-grow">
                 {service.description}
               </p>
-              <p className="mt-5 text-[#002b5c] font-black text-lg md:text-xl">
+              <p className="mt-5 text-[#003F87] font-black text-lg md:text-xl">
                 {service.price}
               </p>
             </article>

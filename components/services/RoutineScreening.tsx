@@ -4,7 +4,7 @@ import {
   routineServices,
   type FilterCategory,
 } from "@/data/services";
-import ServiceIcon from "./ServiceIcon";
+import Image from "next/image";
 
 interface RoutineScreeningProps {
   filter: FilterCategory;
@@ -38,42 +38,52 @@ export default function RoutineScreening({
   return (
     <section className="py-12 md:py-16 px-6 md:px-12 lg:px-[10px] bg-white">
       <div className="max-w-7xl mx-auto lg:max-w-none lg:mx-0 lg:px-[20px]">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-[#002b5c] mb-8 md:mb-10">
-          Routine Screening
-        </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
+          <div className="lg:col-span-2 order-2 lg:order-1">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-[#002b5c] mb-8 md:mb-10">
+              Routine Screening
+            </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
-          {filteredRoutine.length > 0 && (
-            <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6 order-2 lg:order-1">
-              {filteredRoutine.map((service) => (
-                <article
-                  key={service.id}
-                  id={service.id}
-                  className="bg-white p-6 md:p-8 rounded-[24px] md:rounded-[8px] border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
-                >
-                  <ServiceIcon colorClass={service.iconColor} />
+            {filteredRoutine.length > 0 && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start">
+                {filteredRoutine.map((service) => (
+                  <article
+                    key={service.id}
+                    id={service.id}
+                    className="bg-white p-6 md:p-8 pb-[20px] md:pb-[20px] rounded-[24px] md:rounded-[8px] border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
+                  >
+                  {service.image && (
+                    <Image
+                      src={service.image}
+                      alt=""
+                      width={38}
+                      height={38}
+                      className="w-5 h-5 object-contain"
+                    />
+                  )}
                   <h3 className="mt-5 text-lg md:text-xl font-black text-[#002b5c]">
-                    {service.title}
-                  </h3>
-                  <p className="mt-2 text-gray-500 text-sm md:text-base leading-relaxed flex-grow">
-                    {service.description}
-                  </p>
-                  <div className="mt-6 flex items-center justify-between pt-4 border-t border-gray-50">
-                    <span className="text-[#006E25] font-black text-lg md:text-xl">
-                      {service.price}
-                    </span>
-                    <a
-                      href="#"
-                      className="text-[#003F87] font-bold text-sm hover:text-[#002b5c] transition-colors flex items-center gap-1"
-                    >
-                      Book Now
-                      <span aria-hidden="true">→</span>
-                    </a>
-                  </div>
-                </article>
-              ))}
+                      {service.title}
+                    </h3>
+                     <p className="mt-2 text-gray-500 text-sm md:text-base leading-relaxed">
+                       {service.description}
+                     </p>
+                    <div className="mt-3 pt-2 border-t border-gray-50 flex items-center justify-between">
+                      <span className="text-[#006E25] font-black text-lg md:text-xl">
+                        {service.price}
+                      </span>
+                      <a
+                        href="#"
+                        className="text-[#003F87] font-bold text-sm hover:text-[#002b5c] transition-colors flex items-center gap-1"
+                      >
+                        Book Now
+                        <span aria-hidden="true">→</span>
+                      </a>
+                    </div>
+                  </article>
+                ))}
             </div>
-          )}
+            )}
+          </div>
 
           {showFeatured && (
             <aside

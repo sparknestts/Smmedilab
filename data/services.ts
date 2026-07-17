@@ -13,7 +13,7 @@ export interface RoutineService {
   description: string;
   price: string;
   category: ServiceCategory;
-  iconColor: string;
+  image?: string;
   height?: string;
 }
 
@@ -42,7 +42,7 @@ export const routineServices: RoutineService[] = [
       "A fundamental evaluation of overall health and detection of disorders like anemia or infection.",
     price: "$45.00",
     category: "routine",
-    iconColor: "bg-[#f0f4ff]",
+    image: "/drop.svg",
   },
   {
     id: "lipid",
@@ -51,7 +51,7 @@ export const routineServices: RoutineService[] = [
       "Comprehensive measurement of cholesterol and fats to assess cardiovascular risk levels.",
     price: "$55.00",
     category: "routine",
-    iconColor: "bg-[#e7f9ee]",
+    image: "/drop1.svg",
   },
 ];
 

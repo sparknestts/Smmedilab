@@ -45,7 +45,7 @@ accuracy.
 
           <div className="flex-[1] w-full md:max-w-xl">
             <form
-              className="flex items-center bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden"
+              className="flex items-center bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden"
               onSubmit={(e) => e.preventDefault()}
             >
               <div className="flex items-center flex-1 pl-4 md:pl-5">
@@ -71,12 +71,12 @@ accuracy.
                   aria-label="Search for tests"
                 />
               </div>
-              <button
-                type="submit"
-                className="bg-[#002b5c] hover:bg-[#003d7a] text-white font-bold text-sm md:text-base px-5 md:px-8 py-4 md:py-5 transition-colors shrink-0"
-              >
-                Search
-              </button>
+<button
+  type="submit"
+  className="bg-[#002b5c] hover:bg-[#003d7a] rounded-sm text-white font-bold text-sm px-4 py-2 md:py-2.5 mr-2 md:mr-2 transition-colors shrink-0"
+>
+  Search
+</button>
             </form>
           </div>
         </div>
