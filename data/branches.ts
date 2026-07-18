@@ -23,6 +23,7 @@ export interface Branch {
   weekendHours?: string;
   specialNote?: string;
   directionsUrl?: string;
+  mapsEmbedUrl?: string;
 }
 
 export const serviceFilters: { id: ServiceFilter; label: string }[] = [
@@ -50,54 +51,17 @@ export const branches: Branch[] = [
     directionsUrl: "https://maps.app.goo.gl/1L43egCcgGwABbp49",
   },
   {
-    id: "northside",
-    name: "Northside Express",
-    address: "128 Northside Blvd, Suite 400, NY 10021",
+    id: "trincomalee",
+    name: "SM Medi Labs – Trincomalee",
+    address: "531B, Nilaveli Road, Varothayanagar, Trincomalee",
     status: "open",
     statusText: "OPEN NOW",
     hours: "Mon–Sat: 07:00 AM – 08:00 PM",
-    phone: "+1 (800) 555-0101",
-    services: ["all", "blood"],
-    city: "New York",
-    directionsUrl: "https://maps.google.com",
-  },
-  {
-    id: "southside",
-    name: "Southside Hub",
-    address: "890 Southside Drive, NY 10019",
-    status: "opens-soon",
-    statusText: "OPENS 8AM",
-    hours: "Mon–Fri: 08:00 AM – 07:00 PM",
-    phone: "+1 (800) 555-0102",
+    phone: "+94 77 000 0001",
     services: ["all", "blood", "imaging"],
-    city: "New York",
-    directionsUrl: "https://maps.google.com",
-  },
-  {
-    id: "airport",
-    name: "Airport Clinical Lab",
-    address: "Terminal 4, JFK International Airport, NY 11430",
-    status: "open",
-    statusText: "OPEN NOW",
-    hours: "Daily: 24 Hours",
-    phone: "+1 (800) 555-0103",
-    services: ["all", "blood", "imaging", "genomics"],
-    city: "Queens",
-    specialNote:
-      "24-Hour Emergency & Routine Diagnostics Available daily.",
-    directionsUrl: "https://maps.google.com",
-  },
-  {
-    id: "westside",
-    name: "Westside Pediatric",
-    address: "215 Westside Lane, Pediatric Wing, NY 10023",
-    status: "open",
-    statusText: "OPEN NOW",
-    hours: "Mon–Sat: 08:00 AM – 06:00 PM",
-    phone: "+1 (800) 555-0104",
-    services: ["all", "blood"],
-    city: "New York",
-    directionsUrl: "https://maps.google.com",
+    city: "Trincomalee",
+    directionsUrl: "https://maps.app.goo.gl/c2CZcCwPbicS45ME9",
+    mapsEmbedUrl: "https://maps.google.com/maps?q=SM+Medi+Labs+Trincomalee&z=17&output=embed",
   },
 ];
 
