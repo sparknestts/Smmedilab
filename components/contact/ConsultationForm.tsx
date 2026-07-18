@@ -38,14 +38,13 @@ export default function ConsultationForm() {
   }
 
   return (
-    <div className="bg-white rounded-[28px] md:rounded-[32px] shadow-sm border border-gray-100 p-6 md:p-10 lg:p-12">
+    <div className="bg-white rounded-[20px] md:rounded-[24px] shadow-sm border border-gray-100 p-6 md:p-10 lg:p-12">
       <div className="mb-8">
-        <h2 className="text-2xl md:text-3xl font-black text-[#002b5c] mb-3">
+        <h2 className="text-2xl md:text-3xl font-bold text-[#191C1D] mb-3">
           Request a Consultation
         </h2>
-        <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-          Complete the form below, and our lab concierge will contact you within
-          2 business hours.
+        <p className="text-[#424752] text-sm md:text-base leading-relaxed">
+Complete the form below, and our lab concierge will contact you within 2 business hours.
         </p>
       </div>
 
@@ -54,7 +53,7 @@ export default function ConsultationForm() {
           <div className="space-y-2">
             <label
               htmlFor="fullName"
-              className="text-sm font-bold text-[#002b5c]"
+              className="text-sm font-bold text-[#424752]"
             >
               Full Name
             </label>
@@ -64,13 +63,13 @@ export default function ConsultationForm() {
               type="text"
               required
               placeholder="John Doe"
-              className="w-full px-4 py-3.5 rounded-xl border border-gray-200 text-gray-700 placeholder:text-gray-400 outline-none focus:border-[#4a90e2] focus:ring-2 focus:ring-[#4a90e2]/20 transition-all"
+              className="w-full px-4 py-3.5 rounded-xl text-[#6B7280] placeholder:text-gray-400 outline-none focus:border-[#4a90e2] focus:ring-2 focus:ring-[#4a90e2]/20 transition-all"
             />
           </div>
           <div className="space-y-2">
             <label
               htmlFor="email"
-              className="text-sm font-bold text-[#002b5c]"
+              className="text-sm font-bold text-[#424752]"
             >
               Email Address
             </label>
@@ -89,7 +88,7 @@ export default function ConsultationForm() {
           <div className="space-y-2">
             <label
               htmlFor="phone"
-              className="text-sm font-bold text-[#002b5c]"
+              className="text-sm font-bold text-[#424752]"
             >
               Phone Number
             </label>
@@ -105,7 +104,7 @@ export default function ConsultationForm() {
           <div className="space-y-2">
             <label
               htmlFor="subject"
-              className="text-sm font-bold text-[#002b5c]"
+              className="text-sm font-bold text-[#424752]"
             >
               Subject
             </label>
@@ -131,7 +130,7 @@ export default function ConsultationForm() {
         <div className="space-y-2">
           <label
             htmlFor="message"
-            className="text-sm font-bold text-[#002b5c]"
+            className="text-sm font-bold text-[#424752]"
           >
             Your Message
           </label>

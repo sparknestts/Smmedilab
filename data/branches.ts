@@ -88,7 +88,7 @@ export function matchesCitySearch(branch: Branch, query: string): boolean {
 export function getStatusStyles(status: BranchStatus) {
   switch (status) {
     case "open":
-      return "bg-[#e7f9ee] text-[#28a745]";
+      return "bg-[#80F98B] text-[#007327]";
     case "opens-soon":
       return "bg-gray-100 text-gray-500";
     case "closed":

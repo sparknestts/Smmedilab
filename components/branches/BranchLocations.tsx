@@ -14,7 +14,7 @@ function StatusBadge({
 }) {
   return (
     <span
-      className={`inline-block text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full ${getStatusStyles(status)}`}
+      className={`inline-block text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full ${getStatusStyles(status)}`}
     >
       {text}
     </span>
@@ -23,19 +23,19 @@ function StatusBadge({
 
 export default function BranchLocations() {
   return (
-    <section className="py-12 md:py-16 lg:py-20 px-6 md:px-12 lg:px-24 bg-[#f8fafc]">
+    <section className="py-12 md:py-16 lg:py-20 px-6 md:px-12 lg:px-20 bg-[#f8fafc]">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-[#002b5c] mb-8 md:mb-12">
           Our Strategic Locations
         </h2>
 
         {/* Desktop: HQ left (7 cols) + Branch cards right (5 cols) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-13 gap-6 lg:gap-5">
           {/* ─── HQ Card ─── */}
-          <article className="lg:col-span-7 bg-white rounded-[28px] md:rounded-[32px] overflow-hidden shadow-sm border border-gray-100">
-            <div className="grid grid-cols-1 md:grid-cols-2">
+          <article className="relative lg:col-span-8 bg-white rounded-[8px] md:rounded-[8px] overflow-hidden shadow-sm border border-gray-100">
+            <div className="grid grid-cols-1 md:grid-cols-3">
               {/* Image – left side */}
-              <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[420px] bg-[#0a2540] overflow-hidden">
+                <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[220px] bg-[#0a2540] overflow-hidden mr-0 md:mr-0 ml-3 md:ml-8 mt-3 md:mt-8 mb-3 md:mb-8 rounded-lg md:col-span-1">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#0a2540] via-[#1a3a5c] to-[#0a2540]" />
                 <Image
                   src="/branches_2.svg"
@@ -47,10 +47,10 @@ export default function BranchLocations() {
               </div>
 
               {/* Content – right side */}
-              <div className="p-6 md:p-8 flex flex-col justify-center">
+              <div className="p-6 md:p-8 flex flex-col justify-center md:col-span-2">
                 {/* Label + Status */}
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="flex items-center gap-1.5 text-[#0056B3]">
+                <div className="flex items-center justify-between gap-3 mb-2">
+                  <div className="flex items-center gap-1.5 text-[#007327]">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
@@ -67,7 +67,7 @@ export default function BranchLocations() {
                 </div>
 
                 {/* Name */}
-                <h3 className="text-xl md:text-2xl font-black text-[#002b5c] mb-4">
+                <h3 className="text-xl md:text-xl font-black text-[#002b5c] mb-4">
                   {headquarters.name}
                 </h3>
 
@@ -81,21 +81,21 @@ export default function BranchLocations() {
 
                 {/* Hours grid */}
                 <div className="grid grid-cols-2 gap-3 mb-6">
-                  <div className="bg-[#f8fafc] rounded-xl p-3">
-                    <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-0.5">
+                  <div className="bg-[#F3F4F5] rounded-xs p-3">
+                    <p className="text-[10px] font-bold text-[#727784] uppercase tracking-wider mb-0.5">
                       Mon – Fri
                     </p>
-                    <p className="text-xs font-black text-[#002b5c]">
+                    <p className="text-xs font-black text-[#191C1D]">
                       {headquarters.weekdayHours
                         ? headquarters.weekdayHours.replace("Mon–Fri: ", "")
                         : "06:00 AM – 09:00 PM"}
                     </p>
                   </div>
-                  <div className="bg-[#f8fafc] rounded-xl p-3">
-                    <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-0.5">
+                  <div className="bg-[#F3F4F5] rounded-xs p-3">
+                    <p className="text-[10px] font-bold text-[#727784] uppercase tracking-wider mb-0.5">
                       Sat – Sun
                     </p>
-                    <p className="text-xs font-black text-[#002b5c]">
+                    <p className="text-xs font-black text-[#191C1D]">
                       {headquarters.weekendHours
                         ? headquarters.weekendHours.replace("Sat–Sun: ", "")
                         : "07:00 AM – 05:00 PM"}
@@ -104,10 +104,10 @@ export default function BranchLocations() {
                 </div>
 
                 {/* Buttons */}
-                <div className="flex gap-3">
+                <div className="flex gap-2">
                   <a
                     href="/contact"
-                    className="flex-1 inline-flex items-center justify-center bg-[#002b5c] hover:bg-[#003d7a] text-white font-bold px-5 py-3 rounded-xl transition-colors text-sm"
+                    className="flex-7 inline-flex items-center justify-center bg-[#003F87] hover:bg-[#003d7a] text-white font-bold px-5 py-2 rounded-sm transition-colors text-xs"
                   >
                     Book Here
                   </a>
@@ -115,7 +115,7 @@ export default function BranchLocations() {
                     href={headquarters.directionsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center border-2 border-[#002b5c] text-[#002b5c] hover:bg-[#002b5c] hover:text-white font-bold px-5 py-3 rounded-xl transition-colors text-sm"
+                    className="flex-1 inline-flex items-center justify-center border-1 border-[#C2C6D4] text-[#424752] hover:bg-[#002b5c] hover:text-white font-bold px-5 py-2 rounded-sm transition-colors text-xs"
                   >
                     Directions
                   </a>
@@ -129,7 +129,7 @@ export default function BranchLocations() {
             {otherBranches.map((branch) => (
               <article
                 key={branch.id}
-                className="bg-white rounded-[24px] md:rounded-[28px] p-6 md:p-7 shadow-sm border border-gray-100 flex flex-col flex-1"
+                className="bg-white rounded-[8px] md:rounded-[8px] p-6 md:p-7 shadow-sm border border-gray-100 flex flex-col flex-1"
               >
                 {/* Name + Status */}
                 <div className="flex items-start justify-between gap-3 mb-4">
@@ -153,7 +153,7 @@ export default function BranchLocations() {
                 {/* Hours rows */}
                 <div className="space-y-2 mb-5 text-sm">
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-400 font-medium">Weekdays</span>
+                    <span className="text-[#727784] font-medium">Weekdays</span>
                     <span className="font-bold text-[#002b5c]">
                       {branch.weekdayHours
                         ? branch.weekdayHours.replace(/Mon–\w+:\s*/, "")
@@ -161,7 +161,7 @@ export default function BranchLocations() {
                     </span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-400 font-medium">Saturdays</span>
+                    <span className="text-[191C1D] font-medium">Saturdays</span>
                     <span className="font-bold text-[#002b5c]">
                       {branch.hours.includes("Sat")
                         ? branch.hours.replace(/Mon–\w+:\s*/, "")
@@ -187,7 +187,7 @@ export default function BranchLocations() {
                 <div className="flex gap-3 mt-auto pt-4 border-t border-gray-100">
                   <a
                     href={`tel:${branch.phone.replace(/\D/g, "")}`}
-                    className="flex-1 inline-flex items-center justify-center border-2 border-gray-200 hover:border-[#002b5c] text-[#002b5c] font-bold px-4 py-2.5 rounded-xl transition-colors text-sm"
+                    className="flex-1 bg-[#F3F4F5] inline-flex items-center justify-center  hover:border-[#002b5c] text-[#003F87] font-bold px-4 py-2 rounded-lg transition-colors text-sm"
                   >
                     Call Branch
                   </a>
@@ -195,7 +195,7 @@ export default function BranchLocations() {
                     href={branch.directionsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center bg-[#002b5c] hover:bg-[#003d7a] text-white font-bold px-4 py-2.5 rounded-xl transition-colors text-sm"
+                    className="flex-1 inline-flex items-center justify-center bg-[#0056B3] hover:bg-[#003d7a] text-white font-bold px-4 py-2 rounded-lg transition-colors text-sm"
                   >
                     View Info
                   </a>
