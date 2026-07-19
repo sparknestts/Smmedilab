@@ -34,7 +34,7 @@ export default function GalleryGrid() {
             className="h-[300px] sm:col-span-2 lg:col-span-2 lg:col-start-2 lg:row-start-2 aspect-[21/9]"
           /> */}
 
-          <GalleryImage
+          {/* <GalleryImage
             item={galleryImages.waitingArea}
             className="min-h-[200px] lg:col-start-1 lg:row-start-3 aspect-[4/3]"
           />
@@ -46,12 +46,12 @@ export default function GalleryGrid() {
 
           <div className="min-h-[200px] lg:col-start-3 lg:row-start-3 h-full">
             <SequencingCard />
-          </div>
+          </div> */}
 
-          <GalleryImage
+          {/* <GalleryImage
             item={galleryImages.labStaff}
             className="min-h-[260px] md:min-h-[300px] sm:col-span-2 lg:col-span-3 lg:col-start-1 lg:row-start-4 aspect-[21/9]"
-          />
+          /> */}
         </div>
 
         <div className="flex flex-col items-center gap-5 mt-12 md:mt-16">
