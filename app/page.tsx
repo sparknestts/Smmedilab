@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import HealthScreenings from "@/components/HealthScreenings";
 import ScienceOfCertainty from "@/components/ScienceOfCertainty";
 import HomeCollection from "@/components/HomeCollection";
-import Reviews from "@/components/Reviews";
+import GoogleReviews from "@/components/GoogleReviews";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
       <HealthScreenings />
       <ScienceOfCertainty />
       <HomeCollection />
-      <Reviews />
+      <GoogleReviews />
       <Footer />
     </div>
   );
