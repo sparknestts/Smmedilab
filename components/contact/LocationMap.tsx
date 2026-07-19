@@ -9,7 +9,7 @@ export default function LocationMap() {
           <div className="flex items-start ">
             
             <div>
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-[#191C1D]">
+              <h2 className="text-lg md:text-2xl lg:text-3xl font-black text-[#191C1D]">
                 {location.title}
               </h2>
               <div className="flex items-start gap-2 mt-1">
@@ -45,14 +45,14 @@ export default function LocationMap() {
             style={{ border: 0 }}
           />
 
-          <div className="absolute bottom-4 left-4 right-4 sm:right-auto sm:max-w-sm bg-[#FFFFFF]/40 backdrop-blur-xl rounded-2xl p-5 md:p-6 ">
-            <span className="inline-block bg-[#28a745] text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3">
+          <div className="absolute bottom-3 left-3 max-w-[72%] sm:bottom-4 sm:left-4 sm:right-auto sm:max-w-sm bg-[#FFFFFF]/40 backdrop-blur-xl rounded-2xl p-3 sm:p-4 md:p-6">
+            <span className="inline-block bg-[#28a745] text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full mb-2 sm:mb-3">
               Open Now
             </span>
-            <h3 className="text-lg font-black text-[#002b5c] mb-2">
+            <h3 className="text-base sm:text-lg md:text-lg font-black text-[#002b5c] mb-1 sm:mb-2">
               {location.facilityName}
             </h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
+            <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
               {location.facilityDescription}
             </p>
           </div>
