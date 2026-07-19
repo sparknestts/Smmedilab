@@ -32,8 +32,20 @@ function Panel({
 }
 
 const LEAD_BADGE = (
-  <span className="absolute bottom-3 left-3 bg-[#002b5c] text-white text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.12em] px-2.5 py-1 rounded-full shadow-md">
+  <span className="absolute bottom-3 left-3 bg-[#002b5c] text-white text-[28px] sm:text-[28px] font-bold uppercase tracking-[0.12em] px-2.5 py-1 rounded-full shadow-md">
     Lead Pathologist
+  </span>
+);
+
+const SEQ_TEXT = (
+  <span className="absolute top-10 left-8 right-3 text-left text-white text-[28px] sm:text-[28px] font-semibold leading-snug drop-shadow">
+    Next-Generation<br />sequencing technology
+    {/* eslint-disable-next-line @next/next/no-img-element */}
+    <img src="/micro.svg" alt="" className="mt-2 block h-7 w-7 object-contain" />
+    <span className="mt-10  flex w-fit flex-row items-center gap-3 text-[12px] sm:text-[13px] font-semibold leading-snug">
+      <span className="rounded-[12px] bg-[#FFFFFF]/20 p-3 text-[#FFFFFF]">99.9% Accuracy</span>
+      <span className="rounded-[12px] bg-[#FFFFFF]/20 p-3 text-[#FFFFFF]">Rapid Processing</span>
+    </span>
   </span>
 );
 
@@ -89,6 +101,7 @@ export default function GalleryCollage() {
             alt="Lab staff"
             className="h-full rounded-lg"
             overlay="bg-[#003F87]/80"
+            badge={SEQ_TEXT}
           />
         </div>
 
@@ -135,6 +148,7 @@ export default function GalleryCollage() {
             alt="Laboratory technology"
             className="aspect-square"
             overlay="bg-[#003F87]/80"
+            badge={SEQ_TEXT}
           />
           <Panel
             src="/Sample%20Collection.svg"
