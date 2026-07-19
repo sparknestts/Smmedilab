@@ -13,7 +13,7 @@ export default function GalleryGrid() {
     <section className="pb-12 md:pb-16 px-6 md:px-12 lg:px-[10px] bg-white">
       <div className="max-w-7xl mx-auto lg:max-w-none lg:mx-0 lg:px-[20px]">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
-          {/* <GalleryImage
+          <GalleryImage
             item={galleryImages.labFeature}
             className="min-h-[300px] sm:min-h-[360px] lg:min-h-[300px] lg:row-span-2 lg:col-start-1 lg:row-start-1 aspect-auto lg:aspect-[3/4]"
             priority
@@ -27,14 +27,14 @@ export default function GalleryGrid() {
           <GalleryImage
             item={galleryImages.staff1}
             className="h-[300px] sm:col-span-1 lg:col-start-3 lg:row-start-1 aspect-[4/3]"
-          /> */}
+          />
 
-          {/* <GalleryImage
+          <GalleryImage
             item={galleryImages.microscope}
             className="h-[300px] sm:col-span-2 lg:col-span-2 lg:col-start-2 lg:row-start-2 aspect-[21/9]"
-          /> */}
+          />
 
-          {/* <GalleryImage
+          <GalleryImage
             item={galleryImages.waitingArea}
             className="min-h-[200px] lg:col-start-1 lg:row-start-3 aspect-[4/3]"
           />
@@ -46,12 +46,12 @@ export default function GalleryGrid() {
 
           <div className="min-h-[200px] lg:col-start-3 lg:row-start-3 h-full">
             <SequencingCard />
-          </div> */}
+          </div>
 
-          {/* <GalleryImage
+          <GalleryImage
             item={galleryImages.labStaff}
             className="min-h-[260px] md:min-h-[300px] sm:col-span-2 lg:col-span-3 lg:col-start-1 lg:row-start-4 aspect-[21/9]"
-          /> */}
+          />
         </div>
 
         <div className="flex flex-col items-center gap-5 mt-12 md:mt-16">
