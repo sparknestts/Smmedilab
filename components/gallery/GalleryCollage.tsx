@@ -32,7 +32,7 @@ function Panel({
 }
 
 const LEAD_BADGE = (
-  <span className="absolute bottom-2 left-2 sm:bottom-3 sm:left-3 lg:bottom-3 lg:left-3 bg-[#002b5c] text-white text-[9px] sm:text-[11px] lg:text-[28px] font-bold uppercase tracking-[0.12em] px-2.5 py-1 rounded-full shadow-md">
+  <span className="absolute bottom-2 left-2 sm:bottom-3 sm:left-3 lg:bottom-3 lg:left-3 bg-[#002b5c] text-white text-[9px] sm:text-[11px] lg:text-[14px] font-bold uppercase tracking-[0.12em] px-2.5 py-1 rounded-full shadow-md">
     Lead Pathologist
   </span>
 );

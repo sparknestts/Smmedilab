@@ -5,7 +5,7 @@ import StatCounter from "@/components/StatCounter";
 
 export default function AboutPage() {
     return (
-        <div className="flex flex-col min-h-screen bg-white font-sans overflow-x-hidden">
+        <div className="flex flex-col min-h-screen bg-white font-sans overflow-x-clip">
             <Header />
 
             <main className="flex-grow">

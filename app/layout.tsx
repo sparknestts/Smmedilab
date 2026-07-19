@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "SM Medi Lab - Trusted Medical Testing",
   description: "Experience laboratory excellence delivered with editorial grace. We bring world-class diagnostics to your home.",
+  icons: {
+    icon: "/logo.svg",
+  },
 };
 
 export default function RootLayout({
