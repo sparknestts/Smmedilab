@@ -50,7 +50,7 @@ Complete the form below, and our lab concierge will contact you within 2 busines
 
       <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
-          <div className="space-y-2">
+          <div className="space-y-2 field-hairline">
             <label
               htmlFor="fullName"
               className="text-sm font-bold text-[#424752]"
@@ -63,10 +63,10 @@ Complete the form below, and our lab concierge will contact you within 2 busines
               type="text"
               required
               placeholder="John Doe"
-              className="w-full px-4 py-3.5 rounded-xl text-[#6B7280] placeholder:text-gray-400 outline-none focus:border-[#4a90e2] focus:ring-2 focus:ring-[#4a90e2]/20 transition-all"
+              className="w-full px-4 py-3.5 text-gray-700 placeholder:text-gray-400 outline-none transition-all"
             />
           </div>
-          <div className="space-y-2">
+          <div className="space-y-2 field-hairline">
             <label
               htmlFor="email"
               className="text-sm font-bold text-[#424752]"
@@ -79,13 +79,13 @@ Complete the form below, and our lab concierge will contact you within 2 busines
               type="email"
               required
               placeholder="john@example.com"
-              className="w-full px-4 py-3.5 rounded-xl border border-gray-200 text-gray-700 placeholder:text-gray-400 outline-none focus:border-[#4a90e2] focus:ring-2 focus:ring-[#4a90e2]/20 transition-all"
+              className="w-full px-4 py-3.5 text-gray-700 placeholder:text-gray-400 outline-none transition-all"
             />
           </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
-          <div className="space-y-2">
+          <div className="space-y-2 field-hairline">
             <label
               htmlFor="phone"
               className="text-sm font-bold text-[#424752]"
@@ -98,10 +98,10 @@ Complete the form below, and our lab concierge will contact you within 2 busines
               type="tel"
               required
               placeholder="+1 (555) 000-0000"
-              className="w-full px-4 py-3.5 rounded-xl border border-gray-200 text-gray-700 placeholder:text-gray-400 outline-none focus:border-[#4a90e2] focus:ring-2 focus:ring-[#4a90e2]/20 transition-all"
+              className="w-full px-4 py-3.5 text-gray-700 placeholder:text-gray-400 outline-none transition-all"
             />
           </div>
-          <div className="space-y-2">
+          <div className="space-y-2 field-hairline">
             <label
               htmlFor="subject"
               className="text-sm font-bold text-[#424752]"
@@ -112,7 +112,7 @@ Complete the form below, and our lab concierge will contact you within 2 busines
               id="subject"
               name="subject"
               required
-              className="w-full px-4 py-3.5 rounded-xl border border-gray-200 text-gray-700 outline-none focus:border-[#4a90e2] focus:ring-2 focus:ring-[#4a90e2]/20 transition-all bg-white appearance-none"
+              className="w-full px-4 py-3.5 text-gray-700 placeholder:text-gray-400 outline-none transition-all"
               defaultValue=""
             >
               <option value="" disabled>
@@ -127,7 +127,7 @@ Complete the form below, and our lab concierge will contact you within 2 busines
           </div>
         </div>
 
-        <div className="space-y-2">
+        <div className="space-y-2 field-hairline">
           <label
             htmlFor="message"
             className="text-sm font-bold text-[#424752]"
@@ -140,7 +140,7 @@ Complete the form below, and our lab concierge will contact you within 2 busines
             required
             rows={5}
             placeholder="Tell us how we can help you..."
-            className="w-full px-4 py-3.5 rounded-xl border border-gray-200 text-gray-700 placeholder:text-gray-400 outline-none focus:border-[#4a90e2] focus:ring-2 focus:ring-[#4a90e2]/20 transition-all resize-none"
+              className="w-full px-4 py-3.5 text-gray-700 placeholder:text-gray-400 outline-none transition-all"
           />
         </div>
 

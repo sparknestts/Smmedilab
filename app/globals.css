@@ -48,3 +48,26 @@ body {
 #lipid {
   min-height: auto;
 }
+
+/* True sub-pixel hairline bottom border for form fields */
+.field-hairline {
+  position: relative;
+}
+
+.field-hairline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1.45px;
+  background: #e2e5ec;
+  transform: scaleY(0.3);
+  transform-origin: bottom;
+  transition: background-color 0.2s ease;
+}
+
+.field-hairline:focus-within::after {
+  background: #4a90e2;
+  transform: scaleY(0.6);
+}

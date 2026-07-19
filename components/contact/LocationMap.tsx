@@ -6,53 +6,32 @@ export default function LocationMap() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8 md:mb-10">
           <div className="flex items-start gap-3">
-            <svg
-              className="w-6 h-6 text-[#4a90e2] shrink-0 mt-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-              />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-              />
-            </svg>
+            
             <div>
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-[#002b5c]">
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-black text-[#191C1D]">
                 {location.title}
               </h2>
-              <p className="text-gray-500 text-sm md:text-base mt-1">
-                {location.address}
-              </p>
+              <div className="flex items-start gap-2 mt-1">
+                <span
+                  className="w-4 h-4 mt-0.5 shrink-0 bg-[#424752] [mask-image:url('/Container.svg')] [mask-repeat:no-repeat] [mask-position:center] [mask-size:contain]"
+                  aria-hidden="true"
+                />
+                <p className="text-[#424752] text-sm md:text-base">
+                  {location.address}
+                </p>
+              </div>
             </div>
           </div>
           <a
             href={location.directionsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 border-2 border-[#002b5c] text-[#002b5c] font-bold px-6 py-3 rounded-xl hover:bg-[#002b5c] hover:text-white transition-colors shrink-0"
+            className="inline-flex bg-[#E1E3E4] items-center justify-center gap-2  text-[#191C1D] font-bold px-6 py-3 rounded-lg hover:bg-[#002b5c] hover:text-white transition-colors shrink-0"
           >
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
-              />
-            </svg>
+            <span
+              className="w-5 h-5 bg-current [mask-image:url('/Icon.svg')] [mask-repeat:no-repeat] [mask-position:center] [mask-size:contain]"
+              aria-hidden="true"
+            />
             Get Directions
           </a>
         </div>
