@@ -2,24 +2,29 @@ import { galleryStats } from "@/data/gallery";
 
 export default function GalleryHero() {
   return (
-    <section className="pt-10 md:pt-14 lg:pt-16 pb-10 md:pb-12 px-6 md:px-12 lg:px-[10px] bg-white">
+    <section className="pt-5 md:pt-5 lg:pt-9 pb-10 md:pb-12 px-6 md:px-12 lg:px-[10px] bg-white">
       <div className="max-w-7xl mx-auto lg:max-w-none lg:mx-0 lg:px-[20px]">
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 lg:gap-16">
           <div className="flex-1 max-w-2xl">
-            <p className="text-[#4a90e2] font-bold text-xs md:text-sm tracking-[0.2em] uppercase mb-4">
+            <p className="text-[#003F87] font-bold text-xs md:text-xs tracking-[0.2em] uppercase mb-4">
               Visual Precision
             </p>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-black text-[#002b5c] leading-tight tracking-tight mb-5">
-              Inside the Precision Hub.
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem]  font-black text-[#002b5c] leading-tight tracking-tight mb-5">
+              Inside the
+              <br />
+              <span className="text-[#191C1D]">Precision Hub.</span>
             </h1>
-            <p className="text-gray-500 text-base md:text-lg leading-relaxed">
-              Explore the environment where science meets patient care. Our
-              laboratory is equipped with world-class diagnostic technology and
-              managed by experts dedicated to clinical excellence.
-            </p>
           </div>
+        </div>
 
-          <div className="flex items-center gap-0 shrink-0 lg:pt-4">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 lg:gap-16 mt-6 md:mt-0">
+          <p className="text-[#424752] text-base md:text-[14px] leading-relaxed flex-1 max-w-2xl">
+            Explore the environment where science meets patient care. Our
+            laboratory is equipped with world-class diagnostic technology and
+            managed by experts dedicated to clinical excellence.
+          </p>
+
+          <div className="flex items-center gap-0 shrink-0">
             {galleryStats.map((stat, index) => (
               <div key={stat.label} className="flex items-center">
                 {index > 0 && (

@@ -3,7 +3,7 @@ import { contactInfo, operatingHours } from "@/data/contact";
 export default function ContactInfoCards() {
   return (
     <div className="space-y-5 md:space-y-6">
-      <article className="bg-[#f8fafc] border border-gray-100 rounded-[14px] p-6 md:p-8">
+      <article className="bg-[#FFFFFF]/40 rounded-[14px] p-6 md:p-8">
         <div className="bg-[#f0f4ff] w-12 h-12 rounded-xl flex items-center justify-center mb-5">
           <svg
             className="w-6 h-6 text-[#4a90e2]"
@@ -34,7 +34,7 @@ orders electronically.
         </a>
       </article>
 
-      <article className="bg-[#f8fafc] border border-gray-100 rounded-[14px] p-6 md:p-8">
+      <article className="bg-[#F3F4F5] border border-gray-100 rounded-[14px] p-6 md:p-8">
         <div className="bg-[#e7f9ee] w-12 h-12 rounded-xl flex items-center justify-center mb-5">
           <svg
             className="w-6 h-6 text-[#28a745]"

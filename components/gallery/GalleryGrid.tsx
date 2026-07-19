@@ -13,26 +13,26 @@ export default function GalleryGrid() {
     <section className="pb-12 md:pb-16 px-6 md:px-12 lg:px-[10px] bg-white">
       <div className="max-w-7xl mx-auto lg:max-w-none lg:mx-0 lg:px-[20px]">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
-          <GalleryImage
+          {/* <GalleryImage
             item={galleryImages.labFeature}
-            className="min-h-[320px] sm:min-h-[360px] lg:min-h-0 lg:row-span-2 lg:col-start-1 lg:row-start-1 aspect-auto lg:aspect-[3/4]"
+            className="min-h-[300px] sm:min-h-[360px] lg:min-h-[300px] lg:row-span-2 lg:col-start-1 lg:row-start-1 aspect-auto lg:aspect-[3/4]"
             priority
           />
 
           <GalleryImage
             item={galleryImages.technology}
-            className="min-h-[200px] lg:col-start-2 lg:row-start-1 aspect-[4/3]"
+            className="h-[300px] lg:col-start-2 lg:row-start-1 aspect-[4/3]"
           />
 
           <GalleryImage
             item={galleryImages.staff1}
-            className="min-h-[200px] sm:col-span-1 lg:col-start-3 lg:row-start-1 aspect-[4/3]"
-          />
+            className="h-[300px] sm:col-span-1 lg:col-start-3 lg:row-start-1 aspect-[4/3]"
+          /> */}
 
-          <GalleryImage
+          {/* <GalleryImage
             item={galleryImages.microscope}
-            className="min-h-[200px] sm:col-span-2 lg:col-span-2 lg:col-start-2 lg:row-start-2 aspect-[21/9]"
-          />
+            className="h-[300px] sm:col-span-2 lg:col-span-2 lg:col-start-2 lg:row-start-2 aspect-[21/9]"
+          /> */}
 
           <GalleryImage
             item={galleryImages.waitingArea}

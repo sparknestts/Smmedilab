@@ -1,9 +1,10 @@
 export const contactInfo = {
-  phone: "+1 (800) 555-LABS",
-  phoneHref: "tel:+18005555227",
+  contactNumbers: ["0761231229", "0777791229"],
+  phone: "0761231229",
+  phoneHref: "tel:0761231229",
   whatsappHref: "#",
-  email: "Info@smmedilab.com",
-  emailHref: "mailto:Info@smmedilab.com",
+  email: "ruthhari2001@gmail.com",
+  emailHref: "mailto:ruthhari2001@gmail.com",
 };
 
 export const operatingHours = [

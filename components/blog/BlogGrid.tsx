@@ -29,7 +29,7 @@ export default function BlogGrid() {
                 key={category.id}
                 type="button"
                 onClick={() => setActiveFilter(category.id)}
-                className={`shrink-0 px-5 py-2.5 rounded-full text-sm font-semibold transition-all ${
+                className={`shrink-0 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all ${
                   activeFilter === category.id
                     ? "bg-[#002b5c] text-white"
                     : "bg-gray-100 text-gray-600 hover:bg-gray-200"
