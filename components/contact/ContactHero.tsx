@@ -7,7 +7,9 @@ import { contactInfo } from "@/data/contact";
 
 const isMobileDevice = () =>
   typeof navigator !== "undefined" &&
-  /Mobi|Android|iPhone|iPod|iPad/i.test(navigator.userAgent);
+  ("ontouchstart" in window ||
+    navigator.maxTouchPoints > 0 ||
+    /Mobi|Android|iPhone|iPod|iPad/i.test(navigator.userAgent));
 
 export default function ContactHero() {
   const [chooserMode, setChooserMode] = useState<ChooserMode | null>(null);

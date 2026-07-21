@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function GalleryPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-white font-sans overflow-x-clip">
+    <div className="flex flex-col min-h-screen bg-white font-sans">
       <Header />
       <main className="flex-grow">
         <GalleryContent />

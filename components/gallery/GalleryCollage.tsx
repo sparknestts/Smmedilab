@@ -139,12 +139,12 @@ export default function GalleryCollage() {
             className="aspect-square"
           />
           <Panel
-            src="/waiting%20area.svg"
+            src="/Waiting Area.svg"
             alt="Waiting area"
             className="aspect-square"
           />
           <Panel
-            src="/staff_1.svg"
+            src="/taff_1.svg"
             alt="Laboratory technology"
             className="col-span-2 aspect-[16/10]"
             overlay="bg-[#003F87]/80"

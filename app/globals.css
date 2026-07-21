@@ -23,6 +23,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 
 @keyframes bounce-slow {
@@ -32,6 +33,14 @@ body {
 
 .animate-bounce-slow {
   animation: bounce-slow 3s infinite ease-in-out;
+}
+
+.safe-area-inset-top {
+  padding-top: env(safe-area-inset-top, 0);
+}
+
+.safe-area-inset-right {
+  padding-right: env(safe-area-inset-right, 0);
 }
 
 .scrollbar-hide {

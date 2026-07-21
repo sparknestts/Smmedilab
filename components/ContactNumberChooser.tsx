@@ -48,7 +48,7 @@ export default function ContactNumberChooser({
   const handleSelect = (number: string) => {
     if (mode === "whatsapp") {
       const intl = number.replace(/\D/g, "").replace(/^0/, "94");
-      window.open(`https://wa.me/${intl}`, "_blank", "noopener,noreferrer");
+      window.location.href = `https://wa.me/${intl}`;
     } else {
       window.location.href = `tel:${number}`;
     }
