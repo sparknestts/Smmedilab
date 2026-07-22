@@ -49,7 +49,8 @@ export default function Hero() {
             </div>
 
             {/* Right Content - Image */}
-            <div className="flex-1 relative animate-in fade-in slide-in-from-right duration-1000 max-w-sm md:max-w-none mx-auto">
+            <div className="flex-1 relative animate-in fade-in slide-in-from-right duration-1000 
+            max-w-sm md:max-w-none mx-auto">
           <div className="relative z-10 overflow-hidden group">
             <div className="rounded-[32px] overflow-hidden">
               <Image
@@ -57,7 +58,8 @@ export default function Hero() {
                 alt="Medical Microscope"
                 width={800}
                 height={600}
-                className="w-full object-cover transform transition-transform duration-700 group-hover:scale-105"
+                className="w-full object-cover transform transition-transform duration-700
+                 group-hover:scale-105"
                 priority
               />
             </div>
