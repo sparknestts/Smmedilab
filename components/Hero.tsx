@@ -70,15 +70,20 @@ export default function Hero() {
           </div>
 
           {/* ISO Card */}
-          <div className="absolute -bottom-4 -left-2 md:-bottom-6 md:-left-12 bg-white p-2 md:p-6 rounded-xl md:rounded-2xl shadow-2xl z-20 flex items-center gap-2 md:gap-4 animate-bounce-slow border border-gray-50">
-            <div className="bg-[#dbffeb] p-1.5 md:p-3 rounded-full flex items-center justify-center">
-              <svg className="w-5 h-5 md:w-8 md:h-8 text-[#28a745]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 013 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
+          <div className="absolute -bottom-4 -left-2 md:-bottom-6 md:-left-12 bg-white p-2 md:p-4 rounded-sm 
+          md:rounded-lg shadow-2xl z-20 flex items-center gap-2 md:gap-1 animate-bounce-slow border border-gray-50">
+            <div className=" p-1.5 md:p-2 rounded-full flex items-center justify-center">
+              <Image
+                src="/home_1.svg"
+                alt="ISO Accredited"
+                width={32}
+                height={32}
+                className="w-5 h-5 md:w-12 md:h-12"
+              />
             </div>
             <div>
-              <div className="font-black text-gray-900 text-xs md:text-lg leading-tight">ISO Accredited</div>
-              <div className="text-gray-500 text-[10px] md:text-sm font-medium">Global Standard Lab</div>
+              <div className="font-semi-bold text-gray-900 text-[11px] md:text-[16px] leading-tight">ISO Accredited</div>
+              <div className="text-gray-500 text-[10px] md:text-[12px] font-medium">Global Standard Lab</div>
             </div>
           </div>
         </div>

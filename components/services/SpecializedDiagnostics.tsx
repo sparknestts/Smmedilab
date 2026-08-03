@@ -27,7 +27,7 @@ export default function SpecializedDiagnostics({
   if (filtered.length === 0) return null;
 
   return (
-    <section className="py-12 md:py-16 px-6 md:px-12 lg:px-[10px] bg-[#FFFFFF]">
+    <section className="py-12 md:py-16 px-6 md:px-12 lg:px-[60px] bg-[#FFFFFF]">
       <div className="max-w-7xl mx-auto lg:max-w-none lg:mx-0 lg:px-[20px]">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-[#002b5c] mb-8 md:mb-10">
           Specialized Diagnostics

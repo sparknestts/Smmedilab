@@ -36,7 +36,7 @@ export default function RoutineScreening({
   if (filteredRoutine.length === 0 && !showFeatured) return null;
 
   return (
-    <section className="py-12 md:py-16 px-6 md:px-12 lg:px-[10px] bg-white">
+    <section className="py-12 md:py-16 px-6 md:px-12 lg:px-[60px] bg-white">
       <div className="max-w-7xl mx-auto lg:max-w-none lg:mx-0 lg:px-[20px]">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
           <div className="lg:col-span-2 order-2 lg:order-1">

@@ -4,10 +4,10 @@ export default function GoogleReviews() {
   return (
     <section className="bg-[#f8fafc]">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-20 text-center space-y-4">
-        <h2 className="text-3xl md:text-5xl font-black text-[#002b5c] tracking-tight">
+        <h2 className="text-3xl md:text-5xl font-bold text-[#002b5c] tracking-tight">
           What Our Patients Say
         </h2>
-        <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
+        <p className="text-gray-600 text-lg md:text-lg leading-relaxed">
           See what our patients are saying about us on Google
         </p>
       </div>

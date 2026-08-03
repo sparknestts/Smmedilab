@@ -18,7 +18,7 @@ const navLinks = [
   { href: "/branches", label: "Branches" },
   { href: "/contact", label: "Contact" },
   { href: "/blog", label: "Blog" },
-  { href: "/gallery", label: "Gallery" },
+  // { href: "/gallery", label: "Gallery" },
 ];
 
 export default function Header() {

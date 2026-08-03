@@ -8,26 +8,30 @@ export default function HomeCollection() {
                 {/* Left Side Content */}
                 <div className="flex-1 space-y-8 text-white animate-in fade-in slide-in-from-left duration-1000">
                     <div className="space-y-4">
-                        <h2 className="text-3xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight">
+                        <h2 className="text-3xl md:text-5xl lg:text-5xl font-bold leading-[1.1] tracking-tight">
                             Professional Lab Services, <br />
                             <span className="text-blue-200">Delivered to Your Living Room</span>
                         </h2>
-                        <p className="text-blue-50/80 text-lg md:text-xl leading-relaxed max-w-xl">
+                        <p className="text-blue-50/80 text-lg md:text-lg leading-relaxed max-w-xl">
                             Skip the commute and the waiting room. Our certified phlebotomists come to you with clinical precision and editorial grace.
                         </p>
                     </div>
 
-                    <ul className="space-y-5">
+                    <ul className="space-y-5 text-sm md:text-base font-regular ">
                         {[
                             "Painless, hygienic collection techniques",
                             "Cold-chain logistics for sample integrity",
                             "Real-time tracking of your medical expert"
                         ].map((feature, index) => (
                             <li key={index} className="flex items-center gap-4 text-white font-semibold text-lg">
-                                <div className="bg-blue-400/20 p-1 rounded-full border border-blue-300/30">
-                                    <svg className="w-6 h-6 text-[#25D366]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
-                                    </svg>
+                                <div >
+              <Image
+                src="/tik.svg"
+                alt="ISO Accredited"
+                width={32}
+                height={32}
+                className="w-5 h-5 md:w-5 md:h-5"
+              />
                                 </div>
                                 {feature}
                             </li>
@@ -35,7 +39,7 @@ export default function HomeCollection() {
                     </ul>
 
                     <div className="pt-6">
-                        <button className="bg-white text-[#002b5c] px-10 py-5 rounded-2xl font-black text-xl hover:bg-blue-50 transition-all shadow-xl hover:-translate-y-1 active:scale-95">
+                        <button className="bg-white text-[#003F87] px-10 py-5 rounded-lg font-bold text-xl hover:bg-blue-50 transition-all shadow-xl hover:-translate-y-1 active:scale-95">
                             Schedule Home Collection
                         </button>
                     </div>
@@ -47,8 +51,8 @@ export default function HomeCollection() {
                         <Image
                             src="/img1.png"
                             alt="Professional Lab Collection at Home"
-                            width={800}
-                            height={800}
+                            width={600}
+                            height={600}
                             className="w-full h-auto object-cover transform transition-transform duration-1000 group-hover:scale-105"
                             priority
                         />

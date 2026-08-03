@@ -16,7 +16,7 @@ export default function ServicesHero({
   onFilterChange,
 }: ServicesHeroProps) {
   return (
-    <section className="py-12 md:py-16 lg:py-20 px-4 md:px-8 lg:px-[10px] bg-white">
+    <section className="py-12 md:py-16 lg:py-20 px-4 md:px-8 lg:px-[60px] bg-white">
       <div className="max-w-7xl mx-auto lg:max-w-none lg:mx-0 lg:px-[20px]">
         {/* Heading row - full width */}
         <div className="flex flex-col md:flex-row md:items-center gap-10 lg:gap-16">
