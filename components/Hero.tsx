@@ -59,12 +59,14 @@ export default function Hero() {
                 width={800}
                 height={600}
                 className="w-full object-cover transform transition-transform duration-700
-                 group-hover:scale-105"
+                 group-hover:scale-95"
                 priority
               />
             </div>
             {/* Background shape accent */}
-            <div className="absolute -inset-10 -z-10 bg-blue-100/50 rounded-full blur-3xl opacity-50 translate-x-10 translate-y-10 group-hover:translate-x-12 transition-transform duration-700"></div>
+            <div className="absolute -inset-10 -z-1  rounded-full blur-3xl 
+            opacity-50 translate-x-10 translate-y-10 group-hover:translate-x-12 transition-transform 
+            duration-700"></div>
           </div>
 
           {/* ISO Card */}

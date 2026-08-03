@@ -12,7 +12,7 @@ export default function GoogleReviews() {
         </p>
       </div>
 
-      <div className="mx-auto max-w-5xl" style={{ padding: "60px 20px" }}>
+      <div className="mx-auto max-w-25xl" >
         <div
           className="elfsight-app-7c905eb9-7f19-4e9a-9361-93fc72094232"
           data-elfsight-app-lazy=""
