@@ -46,7 +46,7 @@ export default function ScienceOfCertainty() {
                 alt="ISO Accredited"
                 width={32}
                 height={32}
-                className="w-5 h-5 md:w-22 md:h-22"
+                className="w-25 h-25 md:w-22 md:h-22"
               />
                             </div>
                             <div className="space-y-2">
@@ -65,7 +65,7 @@ export default function ScienceOfCertainty() {
                 alt="ISO Accredited"
                 width={32}
                 height={32}
-                className="w-5 h-5 md:w-22 md:h-22"
+                className="w-25 h-25 md:w-22 md:h-22"
               />
                             </div>
                             <div className="space-y-2">
@@ -84,7 +84,7 @@ export default function ScienceOfCertainty() {
                 alt="ISO Accredited"
                 width={32}
                 height={32}
-                className="w-5 h-5 md:w-20 md:h-20"
+                className="w-25 h-25 md:w-22 md:h-22"
               />
                             </div>
                             <div className="space-y-2">
