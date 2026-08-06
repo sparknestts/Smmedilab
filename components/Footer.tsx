@@ -96,6 +96,17 @@ export default function Footer() {
 
                 </div>
 
+                {/* Desktop Bottom Bar */}
+                <div className="hidden md:flex pt-8 border-t border-white/10 flex-row items-center justify-between gap-6">
+                    <p className="text-[#64748B] text-sm font-medium">
+                        &copy; {new Date().getFullYear()} SM Medical Lab. Clinical Precision & Editorial Grace.
+                    </p>
+                    <div className="flex items-center gap-8 text-[#64748B] text-sm font-bold">
+                        <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+                        <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+                    </div>
+                </div>
+
                 {/* Mobile View - Single Column Layout */}
                 <div className="md:hidden bg-[#002b5c] text-white -mx-6 -mb-8 px-6 py-10">
                     {/* Brand & About */}
@@ -193,12 +204,12 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Bottom Bar */}
-                <div className="bg-[#002b5c] pt-8 pb-8 -mx-6 md:mx-0 pr-6 pl-6">
+                {/* Mobile Bottom Bar */}
+                <div className="md:hidden bg-[#002b5c] pt-8 pb-8 -mx-6 px-6">
                     <p className="text-[#ffffff] text-sm font-medium">
                         &copy; {new Date().getFullYear()} SM Medical Lab. Clinical Precision & Editorial Grace.
                     </p>
-                    <div className="flex items-left gap-8 text-[#ffffff] text-sm font-bold">
+                    <div className="flex items-left gap-8 text-[#ffffff] text-sm font-bold mt-4">
                         <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
                         <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
                     </div>

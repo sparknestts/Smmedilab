@@ -143,7 +143,7 @@ export default function Header() {
 
       {/* Mobile slide-in menu (fixed so it works after the header scrolls away) */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-[70] bg-[#002b5c] text-white flex flex-col">
+        <div className="lg:hidden fixed inset-0 z-[70] bg-[#002b5c]/95  text-white flex flex-col">
           <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
             <div className="flex items-center gap-2">
               {/* eslint-disable-next-line @next/next/no-img-element */}
