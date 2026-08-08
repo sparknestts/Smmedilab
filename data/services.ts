@@ -36,20 +36,20 @@ export const filterCategories: { id: FilterCategory; label: string }[] = [
 
 export const routineServices: RoutineService[] = [
   {
-    id: "cbc",
-    title: "Complete Blood Count",
+    id: "urine",
+    title: "Urine Test",
     description:
-      "A fundamental evaluation of overall health and detection of disorders like anemia or infection.",
-    price: "$45.00",
+      "Comprehensive urinalysis to detect kidney function, urinary tract infections, and metabolic disorders.",
+    price: "",
     category: "routine",
     image: "/drop.svg",
   },
   {
-    id: "lipid",
-    title: "Lipid Profile",
+    id: "blood",
+    title: "Blood Test",
     description:
-      "Comprehensive measurement of cholesterol and fats to assess cardiovascular risk levels.",
-    price: "$55.00",
+      "Complete blood analysis including hematology, biochemistry, and immune system markers for overall health assessment.",
+    price: "",
     category: "routine",
     image: "/drop1.svg",
   },
@@ -71,35 +71,115 @@ export const featuredPackage = {
 
 export const specializedServices: SpecializedService[] = [
   {
-    id: "thyroid",
-    title: "Thyroid Profile (T3, T4, TSH)",
+    id: "fbs-ppbs-rbs",
+    title: "FBS / PPBS / RBS",
     description:
-      "Complete thyroid hormone assessment for metabolic and energy regulation.",
-    price: "$65.00",
+      "Blood glucose testing for fasting, post-meal, and random blood sugar levels.",
+    price: "",
+    category: "specialized",
+  },
+  {
+    id: "lipid-profile",
+    title: "Lipid Profile",
+    description:
+      "Comprehensive cholesterol and triglyceride assessment.",
+    price: "",
+    category: "specialized",
+  },
+  {
+    id: "fbc",
+    title: "FBC",
+    description:
+      "Complete blood count for evaluating overall blood health.",
+    price: "",
+    category: "specialized",
+  },
+  {
+    id: "crp",
+    title: "CRP",
+    description:
+      "C-reactive protein test for detecting inflammation.",
+    price: "",
+    category: "specialized",
+  },
+  {
+    id: "esr",
+    title: "ESR",
+    description:
+      "Erythrocyte sedimentation rate test for assessing inflammation.",
+    price: "",
+    category: "specialized",
+  },
+  {
+    id: "ufr",
+    title: "UFR",
+    description:
+      "Urine full report for routine urinary and kidney health assessment.",
+    price: "",
     category: "specialized",
   },
   {
     id: "lft",
-    title: "Liver Function Test (LFT)",
+    title: "LFT",
     description:
-      "Comprehensive hepatic enzyme panel for liver health evaluation.",
-    price: "$50.00",
+      "Liver function test for evaluating liver health.",
+    price: "",
     category: "specialized",
   },
   {
-    id: "kft",
-    title: "Kidney Function Test (KFT)",
+    id: "rft",
+    title: "RFT",
     description:
-      "Renal health markers including creatinine, urea, and electrolytes.",
-    price: "$48.00",
+      "Renal function test for assessing kidney function.",
+    price: "",
     category: "specialized",
   },
   {
-    id: "vitamins",
-    title: "Vitamin D & B12 Panel",
+    id: "hiv-hbsag",
+    title: "HIV / HBsAg",
     description:
-      "Essential vitamin levels for bone health, immunity, and neurological function.",
-    price: "$72.00",
+      "Screening tests for HIV and Hepatitis B infection.",
+    price: "",
+    category: "specialized",
+  },
+  {
+    id: "thyroid-profile",
+    title: "Thyroid Profile",
+    description:
+      "Thyroid hormone assessment for evaluating thyroid function.",
+    price: "",
+    category: "specialized",
+  },
+  {
+    id: "dengue-antibody",
+    title: "Dengue Antibody",
+    description:
+      "Antibody testing to support dengue infection assessment.",
+    price: "",
+    category: "specialized",
+  },
+  {
+    id: "hba1c",
+    title: "HBA1C",
+    description:
+      "Long-term blood glucose monitoring for diabetes assessment.",
+    price: "",
+    category: "specialized",
+  },
+  {
+    id: "malaria",
+    title: "Malaria",
+    description:
+      "Laboratory testing for malaria infection.",
+    price: "",
+    category: "specialized",
+  },
+  {
+    id: "sat",
+    title: "SAT",
+    description:
+      "Serum agglutination test for infection-related antibody detection.",
+    price: "",
     category: "specialized",
   },
 ];
