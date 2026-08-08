@@ -4,7 +4,7 @@ const screenings = [
     {
         title: "Blood Test",
         description: "Comprehensive hematology and biochemistry profiles for foundational health tracking.",
-        price: "From LKR49",
+        price: "",
         icon: (
             <div >
               <Image
@@ -21,7 +21,7 @@ const screenings = [
     {
         title: "DNA",
         description: "Advanced genetic mapping for ancestry, wellness traits, and predispositions.",
-        price: "From LKR 199",
+        price: "",
         icon: (
             <div >
               <Image
@@ -38,7 +38,7 @@ const screenings = [
     {
         title: "Allergy",
         description: "Precise IgE screenings for hundreds of food and environmental triggers.",
-        price: "From LKR 89",
+        price: "",
         icon: (
             <div >
               <Image

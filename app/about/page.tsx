@@ -17,7 +17,7 @@ export default function AboutPage() {
                         <div className="flex-3 space-y-8 animate-in fade-in slide-in-from-left duration-1000">
                             <div className="space-y-4">
                                 <div className="text-[#4a90e2] font-bold text-sm tracking-[0.2em] uppercase">
-                                    Since 1998
+                                    Since 2013
                                 </div>
                                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold text-gray-900 leading-tight tracking-tight">
                                     The Science of <br />
@@ -85,8 +85,7 @@ export default function AboutPage() {
                             </div>
                             <h2 className="text-3xl md:text-3xl font-bold text-[#002b5c] mb-6">Our Mission</h2>
                             <p className="text-gray-500 text-lg md:text-lg leading-relaxed font-medium">
-                                To empower patients and healthcare providers by delivering timely, accurate, and actionable diagnostic insights that drive informed medical decisions and improve health outcomes globally.
-                            </p>
+To deliver world-class laboratory diagnostics through advanced technology, expert professionals, and uncompromising quality standards, ensuring every test result supports timely and confident clinical decisions.                            </p>
                         </div>
 
                         {/* Our Vision Card */}
@@ -99,8 +98,7 @@ export default function AboutPage() {
                             </div>
                             <h2 className="text-3xl md:text-3xl font-bold text-white mb-6">Our Vision</h2>
                             <p className="text-blue-100/80 text-lg md:text-lg leading-relaxed font-medium">
-                                To be the most trusted name in laboratory diagnostics, recognized for pioneering innovation, unmatched clinical precision, and a culture of empathy that treats every sample as a person.
-                            </p>
+                            To become a centre of excellence in diagnostic services, where precision, innovation, and trust come together to advance better healthcare for all.                            </p>
                         </div>
 
                     </div>
@@ -121,7 +119,7 @@ export default function AboutPage() {
                                 <div className="relative pl-12 group">
                                     <div className="absolute left-0 top-1 w-4 h-4 rounded-full bg-[#002b5c] border-4 border-white shadow-sm z-10 group-hover:scale-125 transition-transform"></div>
                                     <div className="space-y-2">
-                                        <div className="text-[#003F87] font-bold text-sm tracking-widest">1998</div>
+                                        <div className="text-[#003F87] font-bold text-sm tracking-widest">2013</div>
                                         <h3 className="text-xl font-bold text-gray-900">Foundation</h3>
                                         <p className="text-gray-500 text-sm leading-relaxed max-w-lg font-medium">
                                             Established as a specialized hematology lab with a team of three visionary pathologists in downtown. Building trust through one-on-one patient care.
@@ -133,7 +131,7 @@ export default function AboutPage() {
                                 <div className="relative pl-12 group">
                                     <div className="absolute left-0 top-1 w-4 h-4 rounded-full bg-[#002b5c] border-4 border-white shadow-sm z-10 group-hover:scale-125 transition-transform"></div>
                                     <div className="space-y-2">
-                                        <div className="text-[#003F87] font-bold text-sm tracking-widest">2010</div>
+                                        <div className="text-[#003F87] font-bold text-sm tracking-widest">2016</div>
                                         <h3 className="text-2xl font-bold text-gray-900">ISO Certification</h3>
                                         <p className="text-gray-500 text-sm leading-relaxed max-w-lg font-medium">
                                             Achieved gold-standard ISO 15189 accreditation, cementing our status as a laboratory of international repute and technical competence.
@@ -275,17 +273,18 @@ export default function AboutPage() {
 
                         {/* Founder Profile */}
                         <div className="flex flex-col items-center gap-6 animate-in fade-in slide-in-from-bottom duration-1000 delay-300">
-                            <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-[2rem] overflow-hidden shadow-xl ring-4 ring-white">
+                            {/* <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-[2rem] overflow-hidden shadow-xl ring-4 ring-white">
                                 <Image
                                     src="/founder.png"
                                     alt="Dr. Sarah Mitchell"
                                     fill
                                     className="object-cover"
                                 />
-                            </div>
+                            </div> */}
                             <div>
-                                <h3 className="text-xl md:text-2xl font-bold text-gray-900">Dr. Sarah Mitchell</h3>
-                                <p className="text-gray-400 font-medium tracking-wide uppercase text-xs md:text-sm mt-1">Medical Director & Founder</p>
+                                <h3 className="text-xl md:text-2xl font-bold text-gray-900">Mr.V.S.S.Selvarajah</h3>
+                                <p className="text-gray-400 font-medium tracking-wide uppercase text-xs md:text-sm mt-1">Founder</p>
+                                <p className="text-gray-900 font-medium tracking-wide uppercase text-xs md:text-sm mt-1">SM Medi Lab</p>
                             </div>
                         </div>
 

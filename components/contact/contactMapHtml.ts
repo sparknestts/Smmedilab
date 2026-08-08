@@ -107,12 +107,18 @@ export const contactMapHtml = `
       popupAnchor: [0, -32]
     });
 
-    var hq = L.marker([9.7076931, 80.0190207], { icon: customIcon }).addTo(map)
-      .bindPopup("<b>SL MediLab</b><br/>Main Headquarters");
+    var marker1 = L.marker([9.7076931, 80.0190207], {icon: customIcon}).addTo(map)
+      .bindPopup("<b>SM MediLabs – Jaffna</b><br/>Main Headquarters");
 
-    map.setView([9.7076931, 80.0190207], 15);
+    var marker2 = L.marker([8.601004, 81.214157], {icon: customIcon}).addTo(map)
+      .bindPopup("<b>SM MediLabs – Trincomalee</b><br/>Branch Office");
 
-    setTimeout(function () { hq.openPopup(); }, 500);
+    var group = new L.featureGroup([marker1, marker2]);
+    map.fitBounds(group.getBounds().pad(0.35));
+
+    setTimeout(function() {
+      marker1.openPopup();
+    }, 500);
   </script>
 </body>
 </html>

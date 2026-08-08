@@ -213,7 +213,7 @@ export default function Header() {
           className="lg:hidden fixed z-[99] p-3 rounded-full bg-[#002b5c] text-white shadow-lg"
           style={{
             top: "calc(1rem + env(safe-area-inset-top, 0px))",
-            right: "calc(1rem + env(safe-area-inset-right, 0px))",
+            right: "1rem",
             touchAction: "manipulation",
             pointerEvents: "auto",
           }}

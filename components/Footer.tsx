@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <footer className="bg-[#FFFFFF] text-white pt-20 pb-8 px-6 md:px-12 lg:px-24 border-t border-white/5">
+        <footer className="bg-[#FFFFFF] text-white pt-20 pb-0 px-6 md:px-12 lg:px-24 border-t border-white/5">
             <div className="max-w-7xl mx-auto">
                 {/* Desktop View - Current Layout */}
                 <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
@@ -108,7 +108,7 @@ export default function Footer() {
                 </div>
 
                 {/* Mobile View - Single Column Layout */}
-                <div className="md:hidden bg-[#002b5c] text-white -mx-6 -mb-8 px-6 py-10">
+                <div className="md:hidden bg-[#002b5c] text-white -mx-6 px-6 py-10">
                     {/* Brand & About */}
                     <div className="text-left mb-6">
                         <h3 className="text-2xl font-black uppercase tracking-widest text-[#ffffff] mb-4">SM Medical Lab</h3>
@@ -205,7 +205,7 @@ export default function Footer() {
                 </div>
 
                 {/* Mobile Bottom Bar */}
-                <div className="md:hidden bg-[#002b5c] pt-8 pb-8 -mx-6 px-6">
+                <div className="md:hidden bg-[#002b5c] pt-8 pb-8 -mx-6 px-6 mb-0 border-t border-gray-700">
                     <p className="text-[#ffffff] text-sm font-medium">
                         &copy; {new Date().getFullYear()} SM Medical Lab. Clinical Precision & Editorial Grace.
                     </p>

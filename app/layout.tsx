@@ -34,8 +34,9 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${manrope.variable} h-full antialiased`}
+      style={{ overflowX: "hidden" }}
     >
-      <body className="min-h-full flex flex-col" style={{ touchAction: "manipulation" }}>{children}</body>
+      <body className="min-h-full flex flex-col" style={{ touchAction: "manipulation", overflowX: "hidden", maxWidth: "100vw" }}>{children}</body>
     </html>
   );
 }
