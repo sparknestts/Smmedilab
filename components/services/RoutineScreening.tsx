@@ -36,76 +36,83 @@ export default function RoutineScreening({
   if (filteredRoutine.length === 0 && !showFeatured) return null;
 
   return (
-    <section className="py-12 md:py-16 px-6 md:px-12 lg:px-[60px] bg-white">
-      <div className="max-w-7xl mx-auto lg:max-w-none lg:mx-0 lg:px-[20px]">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
-          <div className="lg:col-span-2 order-2 lg:order-1">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-[#002b5c] mb-8 md:mb-10">
-              Routine Screening
+    <section className="py-16 md:py-20 px-6 md:px-12 lg:px-24 bg-[#f8fafc]">
+      <div className="max-w-7xl mx-auto space-y-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+
+          {/* Main Services Grid */}
+          <div className="lg:col-span-2 order-2 lg:order-1 space-y-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#002b5c] tracking-tight">
+              Diagnostic Screenings
             </h2>
 
             {filteredRoutine.length > 0 && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-stretch">
                 {filteredRoutine.map((service) => (
                   <article
                     key={service.id}
                     id={service.id}
-                    className="bg-white p-6 md:p-8 pb-[20px] md:pb-[20px] rounded-[24px] md:rounded-[8px] border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
+                    className="bg-white p-6 md:p-8 rounded-3xl border border-slate-100 shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
                   >
-                  {service.image && (
-                    <Image
-                      src={service.image}
-                      alt=""
-                      width={38}
-                      height={38}
-                      className="w-5 h-5 object-contain"
-                    />
-                  )}
-                  <h3 className="mt-5 text-lg md:text-xl font-black text-[#002b5c]">
-                      {service.title}
-                    </h3>
-                     <p className="mt-2 text-gray-500 text-sm md:text-base leading-relaxed">
-                       {service.description}
-                     </p>
-                    <div className="mt-3 pt-2 border-t border-gray-50 flex items-center justify-between">
-                      <span className="text-[#006E25] font-black text-lg md:text-xl">
+                    <div className="space-y-4">
+                      {service.image && (
+                        <div className="bg-[#f0f4ff] p-3 rounded-2xl w-fit">
+                          <Image
+                            src={service.image}
+                            alt=""
+                            width={32}
+                            height={32}
+                            className="w-6 h-6 object-contain"
+                          />
+                        </div>
+                      )}
+                      <h3 className="text-lg md:text-xl font-bold text-[#002b5c] group-hover:text-[#003F87] transition-colors">
+                        {service.title}
+                      </h3>
+                      <p className="text-gray-500 text-sm font-medium leading-relaxed">
+                        {service.description}
+                      </p>
+                    </div>
+
+                    <div className="mt-6 pt-4 border-t border-slate-50 flex items-center justify-between">
+                      <span className="text-[#008a3e] font-extrabold text-lg md:text-xl">
                         {service.price}
                       </span>
                       <a
-                        href="#"
-                        className="text-[#003F87] font-bold text-sm hover:text-[#002b5c] transition-colors flex items-center gap-1"
+                        href="/contact"
+                        className="text-[#002b5c] font-bold text-sm hover:text-[#003F87] transition-colors flex items-center gap-1.5 group-hover:translate-x-1 transition-transform"
                       >
                         Book Now
-                        <span aria-hidden="true">→</span>
+                        <span>&rarr;</span>
                       </a>
                     </div>
                   </article>
                 ))}
-            </div>
+              </div>
             )}
           </div>
 
+          {/* Featured Package Card */}
           {showFeatured && (
             <aside
-              className={`bg-[#002b5c] text-white p-8 md:p-10 rounded-[28px] md:rounded-[8px] flex flex-col justify-between min-h-[400px] lg:min-h-0 order-1 lg:order-2 ${
-                filteredRoutine.length === 0 ? "lg:col-span-3 max-w-2xl mx-auto w-full" : ""
-              }`}
+              className={`bg-[#002b5c] text-white p-8 md:p-10 rounded-3xl shadow-xl flex flex-col justify-between min-h-[400px] lg:min-h-0 order-1 lg:order-2 ${filteredRoutine.length === 0 ? "lg:col-span-3 max-w-2xl mx-auto w-full" : ""
+                }`}
             >
-              <div className="space-y-5">
-                <p className="text-[#4a90e2] font-bold text-xs tracking-[0.2em] uppercase">
+              <div className="space-y-6">
+                <span className="text-[#93C5FD] font-bold text-xs tracking-[0.2em] uppercase bg-white/10 px-3 py-1 rounded-full">
                   {featuredPackage.label}
-                </p>
-                <h3 className="text-2xl md:text-3xl font-black leading-tight">
+                </span>
+                <h3 className="text-2xl md:text-3xl font-bold leading-tight">
                   {featuredPackage.title}
                 </h3>
-                <p className="text-blue-100/80 text-sm md:text-base leading-relaxed">
+                <p className="text-blue-100/80 text-sm leading-relaxed">
                   {featuredPackage.description}
                 </p>
                 <ul className="space-y-3 pt-2">
                   {featuredPackage.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-3">
                       <svg
-                        className="w-5 h-5 text-[#28a745] shrink-0"
+                        className="w-5 h-5 text-emerald-400 shrink-0"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -115,7 +122,7 @@ export default function RoutineScreening({
                           clipRule="evenodd"
                         />
                       </svg>
-                      <span className="text-sm md:text-base font-medium text-blue-50">
+                      <span className="text-sm font-medium text-blue-50">
                         {feature}
                       </span>
                     </li>
@@ -123,13 +130,14 @@ export default function RoutineScreening({
                 </ul>
               </div>
               <a
-                href="#"
-                className="mt-8 w-full text-center bg-white text-[#002b5c] font-bold py-4 rounded-sm hover:bg-gray-100 transition-colors"
+                href="/contact"
+                className="mt-8 w-full text-center bg-white text-[#002b5c] font-bold py-4 rounded-xl hover:bg-slate-100 transition-all shadow-md"
               >
                 Request Appointment
               </a>
             </aside>
           )}
+
         </div>
       </div>
     </section>

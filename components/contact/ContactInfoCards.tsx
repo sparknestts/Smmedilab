@@ -2,11 +2,12 @@ import { contactInfo, operatingHours } from "@/data/contact";
 
 export default function ContactInfoCards() {
   return (
-    <div className="space-y-5 md:space-y-6">
-      <article className="bg-[#FFFFFF]/40 rounded-[14px] p-6 md:p-8">
-        <div className="bg-[#f0f4ff] w-12 h-12 rounded-xl flex items-center justify-center mb-5">
+    <div className="space-y-6">
+      {/* Email Inquiry Card */}
+      <article className="bg-white rounded-3xl p-8 shadow-xs border border-slate-100 space-y-4">
+        <div className="bg-[#f0f4ff] w-12 h-12 rounded-2xl flex items-center justify-center">
           <svg
-            className="w-6 h-6 text-[#4a90e2]"
+            className="w-6 h-6 text-[#003F87]"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -19,25 +20,27 @@ export default function ContactInfoCards() {
             />
           </svg>
         </div>
-        <h3 className="text-lg md:text-xl font-bold text-[#191C1D] mb-2">
-          Email Inquiry
-        </h3>
-        <p className="text-[#424752] text-xd md:text-base mb-4 leading-relaxed">
-          Send us your medical requirements or lab
-orders electronically.
-        </p>
+        <div>
+          <h3 className="text-xl font-bold text-[#002b5c]">
+            Email Inquiry
+          </h3>
+          <p className="text-gray-500 text-sm font-medium leading-relaxed mt-1">
+            Send us your medical requirements or lab orders electronically.
+          </p>
+        </div>
         <a
           href={contactInfo.emailHref}
-          className="text-[#003F87] font-bold hover:text-[#002b5c] transition-colors break-all"
+          className="inline-block text-[#003F87] font-bold text-sm hover:text-[#002b5c] transition-colors break-all"
         >
-          {contactInfo.email}
+          {contactInfo.email} &rarr;
         </a>
       </article>
 
-      <article className="bg-[#F3F4F5] border border-gray-100 rounded-[14px] p-6 md:p-8">
-        <div className="bg-[#e7f9ee] w-12 h-12 rounded-xl flex items-center justify-center mb-5">
+      {/* Operating Hours Card */}
+      <article className="bg-white rounded-3xl p-8 shadow-xs border border-slate-100 space-y-4">
+        <div className="bg-emerald-50 w-12 h-12 rounded-2xl flex items-center justify-center">
           <svg
-            className="w-6 h-6 text-[#28a745]"
+            className="w-6 h-6 text-emerald-600"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -50,20 +53,19 @@ orders electronically.
             />
           </svg>
         </div>
-        <h3 className="text-lg md:text-xl font-black text-[#191C1D] mb-4">
+        <h3 className="text-xl font-bold text-[#002b5c]">
           Operating Hours
         </h3>
-        <ul className="space-y-3">
+        <ul className="space-y-3 pt-2">
           {operatingHours.map((item) => (
             <li
               key={item.days}
-              className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-sm md:text-base"
+              className="flex items-center justify-between gap-2 text-sm border-b border-slate-50 pb-2 last:border-none last:pb-0"
             >
-              <span className="text-[#424752] font-medium text-xs md:text-sm">{item.days}</span>
+              <span className="text-gray-500 font-medium">{item.days}</span>
               <span
-                className={`font-bold ${
-                  item.highlight ? "text-[#006E25] text-xs md:text-sm" : "text-[#191C1D] text-xs md:text-sm"
-                }`}
+                className={`font-bold ${item.highlight ? "text-emerald-600" : "text-gray-800"
+                  }`}
               >
                 {item.hours}
               </span>

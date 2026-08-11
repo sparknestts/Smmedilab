@@ -83,3 +83,13 @@ body {
   background: #4a90e2;
   transform: scaleY(0.6);
 }
+
+/* Add custom animations/transitions for staggered grid and overlay cards */
+.hover\-translate-y-2:hover {
+  transform: translateY(-8px);
+}
+@media (min-width: 1024px) {
+  .lg\:translate-y-6 {
+    transform: translateY(24px);
+  }
+}

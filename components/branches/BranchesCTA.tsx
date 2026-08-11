@@ -1,34 +1,35 @@
-import Image from "next/image";
-
 export default function BranchesCTA() {
   return (
-    <section className="py-12 md:py-16 lg:py-20 px-6 md:px-12 lg:px-24 bg-[#f8fafc]">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16">
-          <div className="text-center space-y-5 md:space-y-6">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium text-[#003F87] leading-tight">
-              Can&apos;t make it to a branch?
-            </h2>
-            <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
-              We offer home collection services for most diagnostic tests. Our
-              certified phlebotomists come to you — at home, office, or hotel —
-              with the same clinical precision you expect in our labs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center bg-[#003F87] hover:bg-[#003d7a] text-white font-medium px-8 py-3 rounded-lg transition-colors"
-              >
-                Book Home Collection
-              </a>
-              <a
-                href="/services"
-                className="inline-flex items-center justify-center border-1 border-[#003F87] text-[#003F87] font-medium px-8 py-3 rounded-lg hover:bg-[#002b5c] hover:text-white transition-colors"
-              >
-                Learn More
-              </a>
-            </div>
-          </div>
+    <section className="py-20 px-6 md:px-12 lg:px-24 bg-white">
+      <div className="max-w-6xl mx-auto rounded-3xl bg-[#002b5c] text-white py-16 px-8 md:px-16 text-center space-y-8 relative overflow-hidden shadow-2xl">
+        {/* Background Ambient Glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+
+        <div className="relative z-10 max-w-2xl mx-auto space-y-4">
+          <span className="text-[#93C5FD] font-bold text-xs uppercase tracking-widest">
+            Home Specimen Collection
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
+            Can&apos;t make it to a branch?
+          </h2>
+          <p className="text-blue-100/80 text-base md:text-lg leading-relaxed">
+            We offer home collection services for diagnostic tests. Our certified phlebotomists come to you with the same clinical precision expected in our labs.
+          </p>
+        </div>
+
+        <div className="relative z-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a
+            href="/contact"
+            className="bg-white hover:bg-slate-100 text-[#002b5c] font-bold px-8 py-4 rounded-xl transition-all shadow-md w-full sm:w-auto"
+          >
+            Book Home Collection
+          </a>
+          <a
+            href="/services"
+            className="border-2 border-white/40 hover:bg-white/10 text-white font-bold px-8 py-4 rounded-xl transition-all w-full sm:w-auto text-center"
+          >
+            Explore Services
+          </a>
         </div>
       </div>
     </section>

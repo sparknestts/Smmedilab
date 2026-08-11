@@ -2,35 +2,35 @@ import Image from "next/image";
 
 export default function BranchesHero() {
   return (
-    <section className="bg-[#0056B3] text-white py-12 md:py-16 lg:py-20 px-6 md:px-12 lg:px-24 mr-3 md:mr-4 lg:mr-28 ml-3 md:ml-4 lg:ml-28 mt-3 md:mt-4 lg:mt-10 rounded-lg">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
-          <div className="flex-1 space-y-5 md:space-y-6">
-            <span className="inline-block bg-white/20 text-white text-xs font-bold uppercase tracking-[0.2em] px-4 py-2 rounded-full">
-              Our Presence
-            </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight max-w-xl">
-              Clinical Precision,
-              <br />
-              Local Care.
-            </h1>
-            <p className="text-blue-100 text-base md:text-lg leading-relaxed max-w-xl">
-              Find an SM Medical Lab branch near you. Our network ensures expert
-              diagnostic services are always within reach.
-            </p>
-          </div>
+    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background overlay */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/img5.png"
+          alt="Network Background"
+          fill
+          className="object-cover opacity-20"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#001730]/90 via-[#002b5c]/85 to-[#002b5c]"></div>
+      </div>
 
-          <div className="flex-1 w-full">
-            <div className="relative aspect-square max-w-md mx-auto lg:max-w-none lg:ml-auto">
-              <Image
-                src="/branches_1.svg"
-                alt="SM Medi Lab global network"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
-          </div>
+      <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12 pt-32 pb-20 md:pt-40 md:pb-28 text-center space-y-6">
+        <span className="inline-block bg-white/10 backdrop-blur-xs text-[#93C5FD] text-xs md:text-sm font-bold uppercase tracking-[0.25em] px-4 py-2 rounded-full border border-white/10">
+          Our Strategic Network
+        </span>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
+          Clinical Precision, Local Care.
+        </h1>
+        <p className="text-blue-100/80 text-base md:text-xl leading-relaxed max-w-2xl mx-auto">
+          Find an SM Medical Lab branch near you. Our expanding network ensures world-class diagnostic services and home collections are always within reach.
+        </p>
+      </div>
+
+      {/* Mouse Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2">
+        <div className="w-6 h-10 rounded-full border-2 border-white/60 flex justify-center p-1">
+          <div className="w-1.5 h-3 bg-white rounded-full animate-bounce"></div>
         </div>
       </div>
     </section>

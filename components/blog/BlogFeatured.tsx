@@ -3,9 +3,9 @@ import { featuredPost } from "@/data/blog";
 
 export default function BlogFeatured() {
   return (
-    <article className="bg-[#FFFFFF] rounded-[8px] md:rounded-[8px] overflow-hidden border border-gray-100 shadow-sm">
-      <div className="grid grid-cols-1 lg:grid-cols-2">
-        <div className="relative aspect-[4/3] lg:aspect-auto lg:min-h-[250px] px-5 pb-5 md:px-8 md:pb-8 lg:px-10 lg:pb-10 mt-5 md:mt-5 lg:mt-5">
+    <article className="bg-[#f8fafc] rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300">
+      <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
+        <div className="relative aspect-[16/10] lg:aspect-auto lg:h-full min-h-[300px]">
           <Image
             src={featuredPost.image}
             alt={featuredPost.title}
@@ -15,33 +15,33 @@ export default function BlogFeatured() {
           />
         </div>
 
-        <div className="p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col justify-center">
-          <div className="flex items-center gap-4 mb-5">
-            <span className="inline-block bg-[#80F98B] text-[#007327] text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full">
+        <div className="p-8 sm:p-10 lg:p-12 flex flex-col justify-center space-y-5">
+          <div className="flex items-center gap-3">
+            <span className="inline-block bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full">
               Featured Insight
             </span>
-            <span className="text-[#424752] text-xs font-medium">
+            <span className="text-gray-400 text-xs font-medium">
               {featuredPost.readTime}
             </span>
           </div>
 
-          <h2 className="text-xl sm:text-2xl md:text-[1.65rem] font-medium text-[#003F87] leading-snug mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#002b5c] leading-snug">
             {featuredPost.title}
           </h2>
 
-          <p className="text-[#424752] text-xs md:text-base leading-relaxed mb-8">
+          <p className="text-gray-600 text-sm md:text-base leading-relaxed">
             {featuredPost.excerpt}
           </p>
 
-          <div className="flex items-center gap-3 pt-6 ">
-            <div className="w-11 h-11 rounded-full bg-[#f0f4ff] flex items-center justify-center shrink-0 overflow-hidden">
-              <span className="text-[#4a90e2] font-bold text-sm">SM</span>
+          <div className="flex items-center gap-3 pt-4 border-t border-slate-200/60">
+            <div className="w-10 h-10 rounded-full bg-[#002b5c] text-white flex items-center justify-center font-bold text-xs shrink-0">
+              SM
             </div>
             <div>
-              <p className="text-[#002b5c] font-bold text-sm md:text-base">
+              <p className="text-[#002b5c] font-bold text-sm">
                 {featuredPost.author.name}
               </p>
-              <p className="text-gray-400 text-sm">{featuredPost.author.role}</p>
+              <p className="text-gray-400 text-xs">{featuredPost.author.role}</p>
             </div>
           </div>
         </div>
