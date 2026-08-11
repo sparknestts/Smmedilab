@@ -5,10 +5,43 @@ import { formSubjects } from "@/data/contact";
 
 export default function ConsultationForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setError("");
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      fullName: formData.get("fullName"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      subject: formData.get("subject"),
+      message: formData.get("message"),
+    };
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Failed to send inquiry");
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "An error occurred");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -44,8 +77,13 @@ export default function ConsultationForm() {
           Request a Consultation
         </h2>
         <p className="text-[#424752] text-sm md:text-base leading-relaxed">
-Complete the form below, and our lab concierge will contact you within 2 business hours.
+          Complete the form below, and our lab concierge will contact you within 2 business hours.
         </p>
+        {error && (
+          <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-xl">
+            <p className="text-red-600 text-sm font-medium">{error}</p>
+          </div>
+        )}
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
@@ -146,9 +184,10 @@ Complete the form below, and our lab concierge will contact you within 2 busines
 
         <button
           type="submit"
-          className="bg-[#002b5c] hover:bg-[#003d7a] text-white font-bold px-8 py-4 rounded-xl transition-colors"
+          disabled={isSubmitting}
+          className="bg-[#002b5c] hover:bg-[#003d7a] text-white font-bold px-8 py-4 rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          Send Inquiry
+          {isSubmitting ? "Sending..." : "Send Inquiry"}
         </button>
       </form>
     </div>

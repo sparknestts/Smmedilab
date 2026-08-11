@@ -84,13 +84,13 @@ export default function AboutPage() {
                 <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <Image
-                            src="/img5.png"
+                            src="/about_hero_1.jpg"
                             alt="Facility Laboratory"
                             fill
                             className="object-cover"
                             priority
                         />
-                        <div className="absolute inset-0 bg-[#001730]/85"></div>
+        <div className="absolute inset-0 z-[1] bg-gradient-to-b from-[#001a3a]/80 via-[#001a3a]/70 to-[#002b5c]/0"></div>
                     </div>
                     <div className="relative z-10 max-w-4xl mx-auto text-center px-6 md:px-12 pt-32 pb-20 md:pt-40 md:pb-28 space-y-4">
                         <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight tracking-tight">
@@ -157,44 +157,7 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-                {/* 3. Stats Section (Full-width colored bar matching home page stats - Sarvify Style) */}
-                <section className="bg-[#002b5c] text-white py-16 px-6 md:px-12 lg:px-24 select-none">
-                    <div className="max-w-7xl mx-auto">
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8 items-center justify-items-center">
-                            {/* Stat 1 */}
-                            <div className="text-center space-y-2">
-                                <div className="text-3xl md:text-5xl font-bold tracking-tight text-white">
-                                    <StatCounter end={2.5} decimals={1} suffix="M+" />
-                                </div>
-                                <div className="text-[10px] md:text-xs font-bold text-blue-200/80 tracking-[0.2em] uppercase">Tests Performed</div>
-                            </div>
-
-                            {/* Stat 2 */}
-                            <div className="text-center space-y-2">
-                                <div className="text-3xl md:text-5xl font-bold tracking-tight text-white">
-                                    <StatCounter end={99.9} decimals={1} suffix="%" />
-                                </div>
-                                <div className="text-[10px] md:text-xs font-bold text-blue-200/80 tracking-[0.2em] uppercase">Accuracy Rate</div>
-                            </div>
-
-                            {/* Stat 3 */}
-                            <div className="text-center space-y-2">
-                                <div className="text-3xl md:text-5xl font-bold tracking-tight text-white">
-                                    <StatCounter end={150} suffix="+" />
-                                </div>
-                                <div className="text-[10px] md:text-xs font-bold text-blue-200/80 tracking-[0.2em] uppercase">Expert Clinicians</div>
-                            </div>
-
-                            {/* Stat 4 */}
-                            <div className="text-center space-y-2">
-                                <div className="text-3xl md:text-5xl font-bold tracking-tight text-white">
-                                    <StatCounter end={12} />
-                                </div>
-                                <div className="text-[10px] md:text-xs font-bold text-blue-200/80 tracking-[0.2em] uppercase">Strategic Branches</div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+        
 
                 {/* 4. Core Values (4 horizontal cards layout - Sarvify Style) */}
                 <section className="py-24 px-6 md:px-12 lg:px-24 bg-slate-50">
@@ -265,35 +228,28 @@ export default function AboutPage() {
                             </ul>
                         </div>
 
-                        {/* Right staggered achievements grid (staggered alternating colors like Sarvify) */}
+                        {/* Right staggered achievements grid */}
                         <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6 select-none relative">
                             {achievements.map((ach, idx) => {
                                 const isStaggered = idx % 2 === 1;
-                                // Alternating card colors matching Sarvify style
-                                // Odd indices get colored blue card, even indices get light grey background card.
-                                const isBlueCard = idx === 1 || idx === 2;
 
                                 return (
                                     <div
                                         key={idx}
-                                        className={`p-8 rounded-3xl transition-all duration-500 flex flex-col gap-4 border shadow-sm hover:shadow-xl hover:-translate-y-1 ${isStaggered ? "lg:translate-y-6" : ""
-                                            } ${isBlueCard
-                                                ? "bg-[#002b5c] text-white border-none"
-                                                : "bg-[#f8fafc] text-gray-900 border-slate-100"
-                                            }`}
+                                        className={`p-8 rounded-3xl transition-all duration-500 flex flex-col gap-4 border border-gray-200 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 ${isStaggered ? "lg:translate-y-6" : ""}`}
                                     >
-                                        <div className={`p-3 rounded-2xl w-fit ${isBlueCard ? "bg-white/10" : "bg-white shadow-xs"}`}>
+                                        <div className="p-3 rounded-2xl w-fit bg-gray-100">
                                             <Image
                                                 src={ach.icon}
                                                 alt={ach.title}
                                                 width={30}
                                                 height={30}
-                                                className={`w-6 h-6 ${isBlueCard ? "invert" : ""}`}
+                                                className="w-6 h-6"
                                             />
                                         </div>
                                         <div className="space-y-1">
-                                            <h3 className={`font-bold text-base md:text-lg ${isBlueCard ? "text-white" : "text-gray-900"}`}>{ach.title}</h3>
-                                            <p className={`text-xs md:text-sm leading-relaxed ${isBlueCard ? "text-blue-100" : "text-gray-500"}`}>
+                                            <h3 className="font-bold text-base md:text-lg text-gray-900">{ach.title}</h3>
+                                            <p className="text-xs md:text-sm leading-relaxed text-gray-600">
                                                 {ach.description}
                                             </p>
                                         </div>

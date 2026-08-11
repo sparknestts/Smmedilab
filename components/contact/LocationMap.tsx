@@ -1,13 +1,18 @@
+"use client";
+
+import { useState } from "react";
 import { location } from "@/data/contact";
 import { contactMapHtml } from "@/components/contact/contactMapHtml";
 
 export default function LocationMap() {
+  const [isMapExpanded, setIsMapExpanded] = useState(false);
+
   return (
     <section className="py-12 md:py-16 lg:py-20 px-6 md:px-12 lg:px-24 bg-white">
       <div className="max-w-7xl mx-auto shadow-lg pb-8 md:pb-5 rounded-t-[8px] rounded-b-[12px]">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4  p-6 md:p-6">
           <div className="flex items-start ">
-            
+
             <div>
               <h2 className="text-lg md:text-2xl lg:text-3xl font-black text-[#191C1D]">
                 {location.title}
@@ -37,13 +42,26 @@ export default function LocationMap() {
           </a>
         </div>
 
-        <div className="relative rounded-[0px] overflow-hidden h-[300px] sm:h-[360px] md:h-[420px]">
+        <div
+          className={`relative rounded-[0px] overflow-hidden h-[300px] sm:h-[360px] md:h-[420px]`}
+        >
           <iframe
             title="SM MediLabs – Headquarters Map"
             srcDoc={contactMapHtml}
             className="absolute inset-0 w-full h-full"
             style={{ border: 0 }}
           />
+
+          {/* Expand icon button - top left corner, mobile only */}
+          <button
+            onClick={() => !isMapExpanded && window.innerWidth < 768 && setIsMapExpanded(true)}
+            className="absolute top-3 left-3 md:hidden bg-black/30 backdrop-blur-sm p-2 rounded-full hover:bg-black/50 transition-colors z-10"
+            aria-label="Expand map"
+          >
+            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+            </svg>
+          </button>
 
           <div className="absolute bottom-3 left-3 max-w-[72%] sm:bottom-4 sm:left-4 sm:right-auto sm:max-w-sm bg-[#FFFFFF]/40 backdrop-blur-xl rounded-2xl p-3 sm:p-4 md:p-6">
             <span className="inline-block bg-[#28a745] text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full mb-2 sm:mb-3">
@@ -57,6 +75,35 @@ export default function LocationMap() {
             </p>
           </div>
         </div>
+
+        {/* Transparent overlay popup */}
+        {isMapExpanded && (
+          <div
+            className="fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm flex items-center justify-center p-4"
+            onClick={() => setIsMapExpanded(false)}
+          >
+            <div
+              className="relative w-full h-full max-w-4xl max-h-[90vh] bg-white rounded-2xl shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setIsMapExpanded(false)}
+                className="absolute -top-2 -right-2 z-10 bg-black/30 backdrop-blur-sm p-1.5 rounded-full hover:bg-black/50 transition-colors"
+                aria-label="Close map"
+              >
+                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+              <iframe
+                title="SM MediLabs – Headquarters Map"
+                srcDoc={contactMapHtml}
+                className="w-full h-full"
+                style={{ border: 0 }}
+              />
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

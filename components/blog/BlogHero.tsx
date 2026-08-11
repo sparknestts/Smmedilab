@@ -6,19 +6,19 @@ export default function BlogHero() {
       {/* Background Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/home_1.png"
+          src="/home_scr_1.jpg"
           alt="Blog Hero Background"
           fill
-          className="object-cover opacity-20"
+          className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#001730]/90 via-[#002b5c]/85 to-[#002b5c]"></div>
+        <div className="absolute inset-0 z-[1] bg-gradient-to-b from-[#001a3a]/80 via-[#001a3a]/70 to-[#002b5c]/0"></div>
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-12 pt-32 pb-20 md:pt-40 md:pb-28 text-center space-y-4">
-        <span className="inline-block bg-white/10 backdrop-blur-xs text-[#93C5FD] text-xs md:text-sm font-bold uppercase tracking-[0.25em] px-4 py-2 rounded-full border border-white/10">
+        {/* <span className="inline-block bg-white/10 backdrop-blur-xs text-[#93C5FD] text-xs md:text-sm font-bold uppercase tracking-[0.25em] px-4 py-2 rounded-full border border-white/10">
           Medical Insights
-        </span>
+        </span> */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
           Insights & Clinical Accuracy
         </h1>

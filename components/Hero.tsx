@@ -59,10 +59,10 @@ export default function Hero() {
         ))}
 
         {/* Dark Overlay */}
-        <div className="absolute inset-0 z-[1] bg-gradient-to-b from-[#001a3a]/80 via-[#001a3a]/70 to-[#002b5c]/9"></div>
+        <div className="absolute inset-0 z-[1] bg-gradient-to-b from-[#001a3a]/80 via-[#001a3a]/70 to-[#002b5c]/0"></div>
 
         {/* Previous / Next Arrows */}
-        <button
+        {/* <button
           type="button"
           aria-label="Previous slide"
           onClick={goToPrev}
@@ -93,7 +93,7 @@ export default function Hero() {
           <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
           </svg>
-        </button>
+        </button> */}
 
         {/* Content */}
         <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12 text-center pt-32 pb-20 md:pt-40 md:pb-28">
@@ -169,13 +169,13 @@ export default function Hero() {
         </div>
 
         {/* Scroll-to-top style floating button (decorative) */}
-        <div className="absolute bottom-6 right-4 md:bottom-10 md:right-12 z-20">
+        {/* <div className="absolute bottom-6 right-4 md:bottom-10 md:right-12 z-20">
           <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#003F87] flex items-center justify-center shadow-lg cursor-pointer hover:bg-[#002b5c] transition-colors">
             <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
             </svg>
           </div>
-        </div>
+        </div> */}
       </section>
 
       <ContactNumberChooser

@@ -43,8 +43,8 @@ export default function InteractiveMap() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
-          <div className="lg:col-span-2 relative rounded-[28px] overflow-hidden bg-[#e8ecf0] h-[320px] sm:h-[400px] md:h-[460px]">
+        <div className="grid grid-cols-1 gap-6 lg:gap-8">
+          <div className="relative rounded-[28px] overflow-hidden bg-[#e8ecf0] h-[320px] sm:h-[400px] md:h-[460px]">
             {showAllBranches ? (
               /* All Branches View: Leaflet map showing EXACTLY our 2 locations (no unrelated clinics) */
               <iframe
@@ -108,7 +108,7 @@ export default function InteractiveMap() {
                 className="w-3.5 h-3.5"
                 fill="none"
                 stroke="currentColor"
-                viewBox="0 0 24 24"
+                viewBox="0 0 24 24" 
               >
                 <path
                   strokeLinecap="round"
@@ -145,7 +145,7 @@ export default function InteractiveMap() {
             </button>
           </div>
 
-          <aside className="bg-white rounded-[28px] border border-gray-100 shadow-sm p-6 md:p-8 flex flex-col">
+          {/* <aside className="bg-white rounded-[28px] border border-gray-100 shadow-sm p-6 md:p-8 flex flex-col">
             <h3 className="text-xl md:text-2xl font-black text-[#002b5c] mb-6">
               Quick Find
             </h3>
@@ -212,7 +212,7 @@ export default function InteractiveMap() {
                 <span className="ml-1 opacity-80">({filteredCount} found)</span>
               )}
             </button>
-          </aside>
+          </aside> */}
         </div>
       </div>
     </section>

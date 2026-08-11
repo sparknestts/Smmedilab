@@ -125,7 +125,7 @@ export default function SpecializedDiagnostics({
               <article
                 key={service.id}
                 onClick={() => setExpandedId(isExpanded ? null : service.id)}
-                className="bg-[#F3F4F5] border-l-4 border-[#002b5c] p-6 md:p-7 rounded-r-lg shadow-sm hover:shadow-md transition-all duration-300 flex flex-col min-h-[200px] cursor-pointer"
+                className="bg-[#F3F4F5] border-l-4 border-[#002b5c] p-5 md:p-6 rounded-r-lg shadow-sm hover:shadow-md transition-all duration-300 flex flex-col min-h-[120px] cursor-pointer"
               >
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 mt-1">
@@ -140,7 +140,7 @@ export default function SpecializedDiagnostics({
                   </h3>
                 </div>
                 <p className="mt-3 text-[#424752] text-sm leading-relaxed flex-grow">
-                  {isExpanded ? service.description : `${service.description.slice(0, 80)}...`}
+                  { service.description }
                 </p>
                
                 {service.price && (

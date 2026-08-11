@@ -27,6 +27,11 @@ export default function Header() {
   const [chooserMode, setChooserMode] = useState<ChooserMode | null>(null);
   const [scrolled, setScrolled] = useState(false);
 
+  const getPageName = () => {
+    const currentPage = navLinks.find(link => link.href === "/" ? pathname === "/" : pathname.startsWith(link.href));
+    return currentPage ? currentPage.label : "SM Medi Lab";
+  };
+
   const openWhatsAppChooser = () => setChooserMode("whatsapp");
 
   const handleCallClick = () => {
@@ -67,7 +72,7 @@ export default function Header() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-12 ${scrolled
-          ? "bg-[#002b5c] text-white shadow-lg py-3.5 border-b border-blue-900/40"
+          ? "bg-[#002b5c] text-white shadow-lg py-3.5 border-b border-blue-900/40 lg:block hidden"
           : "bg-transparent text-white border-b border-white/10"
           }`}
       >
@@ -75,7 +80,7 @@ export default function Header() {
           <a href="/" className="flex items-center gap-2 shrink-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/logo.svg" alt="SM Medi Lab" className="h-9 w-auto" />
-            <span className="text-xl md:text-2xl font-bold tracking-tight">
+            <span className="hidden md:block text-xl md:text-2xl font-bold tracking-tight">
               SM Medi Lab
             </span>
           </a>
@@ -118,6 +123,9 @@ export default function Header() {
               Call Now
             </button>
 
+            <span className="md:hidden text-lg font-bold tracking-tight mr-[3px]">
+              {getPageName()} /
+            </span>
             <button
               type="button"
               className="lg:hidden p-2 rounded-md hover:bg-white/10 transition-colors"

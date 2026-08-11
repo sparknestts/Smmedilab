@@ -14,7 +14,7 @@ function StatusBadge({
 }) {
   return (
     <span
-      className={`inline-block text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full ${getStatusStyles(status)}`}
+      className={`inline-block text-[9px] sm:text-[10px] font-bold uppercase tracking-wider px-1.5 sm:px-3 py-1 rounded-full whitespace-nowrap ${getStatusStyles(status)}`}
     >
       {text}
     </span>
@@ -30,10 +30,10 @@ export default function BranchLocations() {
         </h2>
 
         {/* Desktop Layout Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* ─── Headquarters Card ─── */}
-          <article className="lg:col-span-7 bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 p-6 md:p-8 flex flex-col justify-between hover:shadow-xl transition-all duration-300">
-            <div className="space-y-6">
+          <article className="lg:col-span-7 bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 p-6 md:p-8 flex flex-col justify-between hover:shadow-xl transition-all duration-300 h-full">
+            <div className="space-y-6 flex-1 flex flex-col">
               <div className="flex items-center justify-between gap-3">
                 <div className="flex items-center gap-2 text-emerald-600 font-bold text-sm">
                   <svg className="w-5 h-5 fill-current" viewBox="0 0 20 20">
@@ -104,11 +104,11 @@ export default function BranchLocations() {
           </article>
 
           {/* ─── Other Branches ─── */}
-          <div className="lg:col-span-5 flex flex-col gap-6">
+          <div className="lg:col-span-5 flex flex-col h-full">
             {otherBranches.map((branch) => (
               <article
                 key={branch.id}
-                className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+                className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-full"
               >
                 <div className="space-y-4">
                   <div className="flex items-start justify-between gap-3">
@@ -126,6 +126,26 @@ export default function BranchLocations() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     </svg>
                     <span>{branch.address}</span>
+                  </div>
+
+                  {/* Hours Grid */}
+                  <div className="grid grid-cols-2 gap-4 pt-2">
+                    <div className="bg-slate-50 rounded-2xl p-3 border border-slate-100">
+                      <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Mon – Fri</p>
+                      <p className="text-xs font-bold text-gray-800">
+                        {branch.weekdayHours
+                          ? branch.weekdayHours.replace("Mon–Fri: ", "")
+                          : "06:00 AM – 09:00 PM"}
+                      </p>
+                    </div>
+                    <div className="bg-slate-50 rounded-2xl p-3 border border-slate-100">
+                      <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Sat – Sun</p>
+                      <p className="text-xs font-bold text-gray-800">
+                        {branch.weekendHours
+                          ? branch.weekendHours.replace("Sat–Sun: ", "")
+                          : "07:00 AM – 05:00 PM"}
+                      </p>
+                    </div>
                   </div>
                 </div>
 

@@ -21,13 +21,13 @@ export default function ServicesHero({
       {/* Background image overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/home_1.png"
+          src="/services_hero_1.jpg"
           alt="Services Hero Background"
           fill
-          className="object-cover opacity-20"
+          className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#001730]/90 via-[#002b5c]/85 to-[#002b5c]"></div>
+        <div className="absolute inset-0 z-[1] bg-gradient-to-b from-[#001a3a]/80 via-[#001a3a]/70 to-[#002b5c]/0"></div>
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 pt-32 pb-24 md:pt-40 md:pb-28 space-y-10">
