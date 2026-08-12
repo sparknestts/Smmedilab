@@ -3,8 +3,8 @@ export const contactInfo = {
   phone: "0761231229",
   phoneHref: "tel:0761231229",
   whatsappHref: "#",
-  email: "ruthhari2001@gmail.com",
-  emailHref: "mailto:ruthhari2001@gmail.com",
+  email: "Info@smmedilab.com",
+  emailHref: "mailto:Info@smmedilab.com",
 };
 
 export const operatingHours = [

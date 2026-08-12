@@ -179,15 +179,15 @@ export default function AboutPage() {
                                     key={index}
                                     className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col gap-6"
                                 >
-                                    <div className="bg-[#f0f4ff] p-3 rounded-2xl w-fit">
-                                        {val.icon}
-                                    </div>
-                                    <div className="space-y-2">
+                                    <div className="flex items-center gap-4 sm:flex-col sm:items-start sm:gap-6">
+                                        <div className="bg-[#f0f4ff] p-3 rounded-2xl w-fit">
+                                            {val.icon}
+                                        </div>
                                         <h3 className="font-bold text-gray-900 text-lg">{val.title}</h3>
-                                        <p className="text-gray-500 text-sm font-medium leading-relaxed">
-                                            {val.description}
-                                        </p>
                                     </div>
+                                    <p className="text-gray-500 text-sm font-medium leading-relaxed">
+                                        {val.description}
+                                    </p>
                                 </div>
                             ))}
                         </div>
@@ -238,21 +238,21 @@ export default function AboutPage() {
                                         key={idx}
                                         className={`p-8 rounded-3xl transition-all duration-500 flex flex-col gap-4 border border-gray-200 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 ${isStaggered ? "lg:translate-y-6" : ""}`}
                                     >
-                                        <div className="p-3 rounded-2xl w-fit bg-gray-100">
-                                            <Image
-                                                src={ach.icon}
-                                                alt={ach.title}
-                                                width={30}
-                                                height={30}
-                                                className="w-6 h-6"
-                                            />
+                                        <div className="flex items-center gap-4 sm:flex-col sm:items-start sm:gap-4">
+                                            <div className="p-3 rounded-2xl w-fit bg-gray-100">
+                                                <Image
+                                                    src={ach.icon}
+                                                    alt={ach.title}
+                                                    width={30}
+                                                    height={30}
+                                                    className="w-6 h-6"
+                                                />
+                                            </div>
+                                            <h3 className="font-bold text-lg md:text-lg text-gray-900">{ach.title}</h3>
                                         </div>
-                                        <div className="space-y-1">
-                                            <h3 className="font-bold text-base md:text-lg text-gray-900">{ach.title}</h3>
-                                            <p className="text-xs md:text-sm leading-relaxed text-gray-600">
-                                                {ach.description}
-                                            </p>
-                                        </div>
+                                        <p className="text-xs md:text-sm leading-relaxed text-gray-600">
+                                            {ach.description}
+                                        </p>
                                     </div>
                                 );
                             })}

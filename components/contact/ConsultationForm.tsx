@@ -6,12 +6,10 @@ import { formSubjects } from "@/data/contact";
 export default function ConsultationForm() {
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [error, setError] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setError("");
 
     const formData = new FormData(e.currentTarget);
     const data = {
@@ -22,26 +20,25 @@ export default function ConsultationForm() {
       message: formData.get("message"),
     };
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+    // Construct email body with form details
+    const emailBody = `
+Name: ${data.fullName}
+Email: ${data.email}
+Phone: ${data.phone}
+Subject: ${data.subject}
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || "Failed to send inquiry");
-      }
+Message:
+${data.message}
+    `.trim();
 
-      setSubmitted(true);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "An error occurred");
-    } finally {
-      setIsSubmitting(false);
-    }
+    // Create mailto link
+    const mailtoLink = `mailto:Info@smmedilab.com?subject=${encodeURIComponent(data.subject as string)}&body=${encodeURIComponent(emailBody)}`;
+
+    // Open email client
+    window.open(mailtoLink, '_blank');
+
+    setSubmitted(true);
+    setIsSubmitting(false);
   };
 
   if (submitted) {
@@ -61,11 +58,17 @@ export default function ConsultationForm() {
           </svg>
         </div>
         <h3 className="text-2xl font-black text-[#002b5c] mb-3">
-          Inquiry Sent Successfully
+          Email Client Opened
         </h3>
         <p className="text-gray-500">
-          Our lab concierge will contact you within 2 business hours.
+          Your email client should have opened with your inquiry details pre-filled. Please send the email to complete your inquiry.
         </p>
+        <button
+          onClick={() => setSubmitted(false)}
+          className="mt-6 bg-[#002b5c] hover:bg-[#003d7a] text-white font-bold px-6 py-3 rounded-xl transition-colors"
+        >
+          Send Another Inquiry
+        </button>
       </div>
     );
   }
@@ -79,11 +82,6 @@ export default function ConsultationForm() {
         <p className="text-[#424752] text-sm md:text-base leading-relaxed">
           Complete the form below, and our lab concierge will contact you within 2 business hours.
         </p>
-        {error && (
-          <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-xl">
-            <p className="text-red-600 text-sm font-medium">{error}</p>
-          </div>
-        )}
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">

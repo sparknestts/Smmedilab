@@ -14,7 +14,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Email configuration
-    const TO_EMAIL = 'ruthhari2001@gmail.com';
+    const TO_EMAIL = 'Info@smmedilab.com';
     const FROM_EMAIL = 'onboarding@resend.dev';
 
     // Create email content

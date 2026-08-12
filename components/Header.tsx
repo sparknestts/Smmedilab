@@ -124,7 +124,7 @@ export default function Header() {
             </button>
 
             <span className="md:hidden text-lg font-bold tracking-tight mr-[3px]">
-              {getPageName()} /
+              {getPageName()} |
             </span>
             <button
               type="button"
