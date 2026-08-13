@@ -17,7 +17,7 @@ const navLinks = [
   { href: "/services", label: "Services" },
   { href: "/branches", label: "Branches" },
   { href: "/contact", label: "Contact" },
-  { href: "/blog", label: "Blog" },
+  // { href: "/blog", label: "Blog" },
   // { href: "/gallery", label: "Gallery" },
 ];
 
@@ -150,7 +150,7 @@ export default function Header() {
           open={chooserMode !== null}
           onClose={() => setChooserMode(null)}
           mode={chooserMode ?? "whatsapp"}
-          numbers={contactInfo.contactNumbers}
+          numbers={contactInfo.contactNumbers.map(n => typeof n === 'string' ? { number: n, label: '' } : n)}
         />
       </header>
 

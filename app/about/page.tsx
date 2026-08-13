@@ -84,7 +84,7 @@ export default function AboutPage() {
                 <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <Image
-                            src="/about_hero_1.jpg"
+                            src="/h1.jpg"
                             alt="Facility Laboratory"
                             fill
                             className="object-cover"

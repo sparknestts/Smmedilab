@@ -87,7 +87,7 @@ export default function ContactHero() {
           open={chooserMode !== null}
           onClose={() => setChooserMode(null)}
           mode={chooserMode ?? "whatsapp"}
-          numbers={contactInfo.contactNumbers}
+          numbers={contactInfo.contactNumbers.map(n => typeof n === 'string' ? { number: n, label: '' } : n)}
         />
       </section>
     </>

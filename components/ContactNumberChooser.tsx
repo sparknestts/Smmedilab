@@ -25,7 +25,7 @@ export default function ContactNumberChooser({
   open: boolean;
   onClose: () => void;
   mode: ChooserMode;
-  numbers: string[];
+  numbers: { number: string; label: string }[];
 }) {
   useEffect(() => {
     if (!open) return;
@@ -81,14 +81,17 @@ export default function ContactNumberChooser({
           </button>
         </div>
         <div className="space-y-3">
-          {numbers.map((number) => (
+          {numbers.map((item) => (
             <button
-              key={number}
+              key={item.number}
               type="button"
-              onClick={() => handleSelect(number)}
+              onClick={() => handleSelect(item.number)}
               className="w-full flex items-center justify-between gap-3 bg-[#f8fafc] hover:bg-[#eef2ff] border border-gray-100 rounded-xl px-4 py-3.5 text-left transition-colors"
             >
-              <span className="text-[#191C1D] font-semibold text-base">{formatNumber(number)}</span>
+              <div className="flex flex-col">
+                <span className="text-[#191C1D] font-semibold text-base">{formatNumber(item.number)}</span>
+                <span className="text-gray-500 text-xs">{item.label}</span>
+              </div>
               {mode === "whatsapp" ? (
                 <svg className="w-5 h-5 text-[#25D366] shrink-0" viewBox="0 0 24 24" fill="currentColor">
                   {WHATSAPP_ICON}

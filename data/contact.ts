@@ -1,5 +1,8 @@
 export const contactInfo = {
-  contactNumbers: ["0761231229", "0777791229"],
+  contactNumbers: [
+    { number: "0761231229", label: "Jaffna - HQ" },
+    { number: "0777791229", label: "Trincomalee" }
+  ],
   phone: "0761231229",
   phoneHref: "tel:0761231229",
   whatsappHref: "#",
