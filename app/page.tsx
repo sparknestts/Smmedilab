@@ -3,18 +3,20 @@ import Hero from "@/components/Hero";
 import HealthScreenings from "@/components/HealthScreenings";
 import ScienceOfCertainty from "@/components/ScienceOfCertainty";
 import HomeCollection from "@/components/HomeCollection";
-import Reviews from "@/components/Reviews";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import GoogleReviews from "@/components/GoogleReviews";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-white font-sans overflow-x-hidden">
+    <div className="flex flex-col min-h-screen bg-white font-sans overflow-x-hidden w-full">
       <Header />
       <Hero />
       <HealthScreenings />
       <ScienceOfCertainty />
       <HomeCollection />
-      <Reviews />
+      <WhyChooseUs />
+      <GoogleReviews />
       <Footer />
     </div>
   );

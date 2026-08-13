@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #FFFFFF;
   --foreground: #171717;
 }
 
@@ -10,6 +10,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-manrope: var(--font-manrope);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,6 +24,9 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 @keyframes bounce-slow {
@@ -32,4 +36,60 @@ body {
 
 .animate-bounce-slow {
   animation: bounce-slow 3s infinite ease-in-out;
+}
+
+.safe-area-inset-top {
+  padding-top: env(safe-area-inset-top, 0);
+}
+
+.safe-area-inset-right {
+  padding-right: env(safe-area-inset-right, 0);
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cover both cbc and lipid service sections */
+#cbc,
+#lipid {
+  min-height: auto;
+}
+
+/* True sub-pixel hairline bottom border for form fields */
+.field-hairline {
+  position: relative;
+}
+
+.field-hairline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1.45px;
+  background: #e2e5ec;
+  transform: scaleY(0.3);
+  transform-origin: bottom;
+  transition: background-color 0.2s ease;
+}
+
+.field-hairline:focus-within::after {
+  background: #4a90e2;
+  transform: scaleY(0.6);
+}
+
+/* Add custom animations/transitions for staggered grid and overlay cards */
+.hover\-translate-y-2:hover {
+  transform: translateY(-8px);
+}
+@media (min-width: 1024px) {
+  .lg\:translate-y-6 {
+    transform: translateY(24px);
+  }
 }
