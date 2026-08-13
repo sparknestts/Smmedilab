@@ -21,7 +21,7 @@ export default function ServicesHero({
       {/* Background image overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/services_hero_1.jpg"
+          src="/s1.jpg"
           alt="Services Hero Background"
           fill
           className="object-cover"
@@ -84,13 +84,13 @@ export default function ServicesHero({
 
         {/* Filter categories tabs */}
         <div className="flex justify-center">
-          <div className="flex gap-2.5 overflow-x-auto pb-2 scrollbar-hide max-w-full">
+          <div className="flex gap-2.5  pb-2 scrollbar-hide max-w-full">
             {filterCategories.map((category) => (
               <button
                 key={category.id}
                 type="button"
                 onClick={() => onFilterChange(category.id)}
-                className={`shrink-0 px-5 py-2.5 rounded-full text-xs md:text-sm font-bold transition-all shadow-xs ${activeFilter === category.id
+                className={`shrink-0 px-6 py-2.5 rounded-full text-xs md:text-sm font-bold transition-all shadow-xs ${activeFilter === category.id
                     ? "bg-white text-[#002b5c] shadow-lg scale-105"
                     : "bg-white/10 text-white hover:bg-white/20 backdrop-blur-xs"
                   }`}

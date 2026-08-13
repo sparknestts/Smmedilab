@@ -7,7 +7,7 @@ import { contactInfo } from "@/data/contact";
 
 const heroImages = [
   { src: "/home_scr_1.jpeg", alt: "Medical Laboratory - Professional Testing" },
-  { src: "h1.jpg", alt: "Medical Laboratory - Home Collection" },
+  { src: "h3.jpg", alt: "Medical Laboratory - Home Collection" },
   { src: "/h2.jpg", alt: "Medical Laboratory - Advanced Diagnostics" },
   { src: "/home_scr_4.jpg", alt: "Medical Laboratory - Quality Assurance" },
 ];
