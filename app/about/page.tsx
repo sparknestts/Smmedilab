@@ -157,10 +157,48 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-        
+              
+
+                {/* Mission & Vision Section */}
+                <section className="py-24 bg-white px-6 md:px-12 lg:px-24">
+                    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+
+                        {/* Our Mission Card */}
+                        <div className="bg-white p-10 md:p-14 rounded-[10px] shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 group">
+                            <div className="flex items-center gap-4 mb-6 sm:flex-col sm:items-start sm:mb-10 sm:gap-6">
+                                <div className="bg-blue-50 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <svg className="w-8 h-8 text-[#002b5c]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10" strokeWidth="2" />
+                                        <circle cx="12" cy="12" r="6" strokeWidth="2" />
+                                        <circle cx="12" cy="12" r="2" strokeWidth="2" />
+                                    </svg>
+                                </div>
+                                <h2 className="text-lg md:text-3xl font-bold text-[#002b5c]">Our Mission</h2>
+                            </div>
+                            <p className="text-gray-500 text-sm md:text-lg leading-relaxed font-medium">
+To deliver world-class laboratory diagnostics through advanced technology, expert professionals, and uncompromising quality standards, ensuring every test result supports timely and confident clinical decisions.                            </p>
+                        </div>
+
+                        {/* Our Vision Card */}
+                        <div className="bg-white p-10 md:p-14 rounded-[10px] shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 group">
+                            <div className="flex items-center gap-4 mb-6 sm:flex-col sm:items-start sm:mb-10 sm:gap-6">
+                                <div className="bg-blue-50 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <svg className="w-8 h-8 text-[#002b5c]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                    </svg>
+                                </div>
+                                <h2 className="text-lg md:text-3xl font-bold text-[#002b5c]">Our Vision</h2>
+                            </div>
+                            <p className="text-gray-500 text-sm md:text-lg leading-relaxed font-medium">
+                            To become a centre of excellence in diagnostic services, where precision, innovation, and trust come together to advance better healthcare for all.                            </p>
+                        </div>
+
+                    </div>
+                </section>
 
                 {/* 4. Core Values (4 horizontal cards layout - Sarvify Style) */}
-                <section className="py-24 px-6 md:px-12 lg:px-24 bg-slate-50">
+                <section className="py-24 px-6 md:px-12 lg:px-24 bg-white">
                     <div className="max-w-7xl mx-auto space-y-16">
                         {/* Heading */}
                         <div className="text-center space-y-4 max-w-3xl mx-auto">
@@ -293,6 +331,37 @@ export default function AboutPage() {
                         </div>
                     </div>
                 </section>
+
+                                {/* Founder's Quote Section */}
+                <section className="py-32 bg-white px-6 md:px-12 lg:px-24 overflow-hidden">
+                    <div className="max-w-5xl mx-auto text-center space-y-16">
+                        {/* Quote Text */}
+                        <div className="relative">
+                            {/* Decorative Quote Marks */}
+                            <h2 className="text-3xl md:text-5xl lg:text-5xl font-medium text-gray-900 leading-[1.1] tracking-tight relative z-10">
+                                &ldquo;Behind every sample is a life waiting for answers. We don&apos;t just process data; we deliver <span className="text-[#002b5c]">peace of mind.</span>&rdquo;
+                            </h2>
+                        </div>
+
+                        {/* Founder Profile */}
+                        <div className="flex flex-col items-center gap-6 animate-in fade-in slide-in-from-bottom duration-1000 delay-300">
+                            {/* <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-[2rem] overflow-hidden shadow-xl ring-4 ring-white">
+                                <Image
+                                    src="/founder.png"
+                                    alt="Dr. Sarah Mitchell"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div> */}
+                            <div>
+                                <h3 className="text-xl md:text-2xl font-bold text-gray-900">Mr.V.S.S.Selvarajah</h3>
+                                <p className="text-gray-400 font-medium tracking-wide uppercase text-xs md:text-sm mt-1">Founder</p>
+                                <p className="text-gray-900 font-medium tracking-wide uppercase text-xs md:text-sm mt-1">SM Medi Lab</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
             </main>
 
             <Footer />
