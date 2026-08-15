@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
 
     // Email configuration
     const TO_EMAIL = 'info@smmedilab.com';
-    const FROM_EMAIL = 'noreply@smmedilab.com';
+    const FROM_EMAIL = 'noreply@contact.smmedilab.com';
 
     // Create email content
     const emailContent = `
