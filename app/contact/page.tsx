@@ -15,7 +15,7 @@ export default function ContactPage() {
       <Header />
       <main className="flex-grow">
         <ContactContent />
-      </main>
+       </main>
       <Footer />
     </div>
   );
