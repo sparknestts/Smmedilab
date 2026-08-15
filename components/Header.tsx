@@ -124,8 +124,9 @@ export default function Header() {
             </button>
 
             <span className="md:hidden text-lg font-bold tracking-tight mr-[3px]">
-              {getPageName()} |
+              {getPageName()}
             </span>
+            <span className="md:hidden self-stretch w-px bg-white/50 mx-1"></span>
             <button
               type="button"
               className="lg:hidden p-2 rounded-md hover:bg-white/10 transition-colors"
