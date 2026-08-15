@@ -14,8 +14,8 @@ export async function POST(request: NextRequest) {
     }
 
     // Email configuration
-    const TO_EMAIL = 'Info@smmedilab.com';
-    const FROM_EMAIL = 'onboarding@resend.dev';
+    const TO_EMAIL = 'smmedilab.com';
+    const FROM_EMAIL = 'noreply@smmedilab.com';
 
     // Create email content
     const emailContent = `
@@ -49,6 +49,7 @@ export async function POST(request: NextRequest) {
       body: JSON.stringify({
         from: FROM_EMAIL,
         to: TO_EMAIL,
+        reply_to: email, // User's email for replies
         subject: `New Contact Inquiry: ${subject}`,
         text: emailContent,
         html: `
