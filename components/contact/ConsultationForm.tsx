@@ -7,7 +7,7 @@ export default function ConsultationForm() {
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -20,25 +20,26 @@ export default function ConsultationForm() {
       message: formData.get("message"),
     };
 
-    // Construct email body with form details
-    const emailBody = `
-Name: ${data.fullName}
-Email: ${data.email}
-Phone: ${data.phone}
-Subject: ${data.subject}
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
 
-Message:
-${data.message}
-    `.trim();
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
 
-    // Create mailto link
-    const mailtoLink = `mailto:Info@smmedilab.com?subject=${encodeURIComponent(data.subject as string)}&body=${encodeURIComponent(emailBody)}`;
-
-    // Open email client
-    window.open(mailtoLink, '_blank');
-
-    setSubmitted(true);
-    setIsSubmitting(false);
+      setSubmitted(true);
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('Failed to send email. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -58,10 +59,10 @@ ${data.message}
           </svg>
         </div>
         <h3 className="text-2xl font-black text-[#002b5c] mb-3">
-          Email Client Opened
+          Inquiry Sent Successfully
         </h3>
         <p className="text-gray-500">
-          Your email client should have opened with your inquiry details pre-filled. Please send the email to complete your inquiry.
+          Thank you for your inquiry! Our team will get back to you within 2 business hours.
         </p>
         <button
           onClick={() => setSubmitted(false)}
