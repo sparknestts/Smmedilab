@@ -88,7 +88,12 @@ export const metadata: Metadata = {
     images: ["/logo.svg"],
   },
   icons: {
-    icon: "/logo.svg",
+    icon: [
+      {
+        url: "/favicon.ico", sizes: "any"
+      },
+    ],
+    apple: "/apple-icon.png",
   },
   other: {
     "geo.region": "LK-N",
