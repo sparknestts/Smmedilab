@@ -87,7 +87,8 @@ export const metadata: Metadata = {
       "Accurate blood tests, DNA analysis & home sample collection in Jaffna. Fast digital reports.",
     images: ["/logo.svg"],
   },
-  icon: [
+  icons: {
+    icon: [
       {
         url: "/favicon.ico", sizes: "any"
       },
