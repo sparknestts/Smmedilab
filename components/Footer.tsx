@@ -61,8 +61,7 @@ export default function Footer() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                 </svg>
-                                K.K.S Rd, Uppumada Junction, Kondavil,
-                                Jaffna
+                                Jaffna, Sri Lanka
                             </li>
                         </ul>
                         <div className="flex items-center gap-3 pt-2">
@@ -101,24 +100,17 @@ export default function Footer() {
                 </div>
 
                 {/* Desktop Bottom Bar */}
-                <div className="hidden md:flex pt-6 pb-8 flex-row items-center justify-between border-t border-white/10">
-                    <div className="flex items-center gap-2">
+                <div className="hidden md:flex pt-6 pb-8 flex-col items-center gap-1 border-t border-white/10 md:flex-row md:justify-between">
+                    <div className="flex flex-col gap-0.5">
                         <p className="text-[#ffffff] text-sm font-medium">
-                            &copy; {new Date().getFullYear()}
+                            &copy; {new Date().getFullYear()} SM Medi Lab. All rights reserved.
                         </p>
-                        <Image
-                            src="/company_logo.png"
-                            alt="Company Logo"
-                            width={60}
-                            height={40}
-                            className="h-4 w-auto"
-                        />
-                        <p className="text-[#ffffff] text-sm font-medium">
-                            SparkNest Tech Solutions (Pvt) Ltd
+                        <p className="text-white/40 text-xs">
+                            Website by{" "}
+                            <a href="tel:+94762420318" className="hover:text-white/60 transition-colors">
+                                SparkNest Tech Solutions (Pvt) Ltd · +94 76 242 0318
+                            </a>
                         </p>
-                    </div>
-                    <div className="flex items-center text-[#ffffff] text-sm font-bold">
-                        <a href="tel:+94762420318" className="hover:text-white transition-colors">Contact No : +94 76 242 0318</a>
                     </div>
                 </div>
 
@@ -176,8 +168,7 @@ export default function Footer() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                 </svg>
-                                K.K.S Rd, Uppumada Junction, Kondavil,
-                                Jaffna
+                                Jaffna, Sri Lanka
                             </li>
                         </ul>
                     </div>
@@ -199,24 +190,15 @@ export default function Footer() {
 
                 {/* Mobile Bottom Bar */}
                 <div className="md:hidden justify-center bg-[#002b5c] pt-8 pb-8 -mx-6 px-6 mb-0 border-t border-gray-700">
-                    <div className="flex items-center justify-center gap-2">
-                        <p className="text-[#ffffff] text-sm font-medium text-center">
-                            &copy; {new Date().getFullYear()}
-                        </p>
-                        <Image
-                            src="/company_logo.png"
-                            alt="Company Logo"
-                            width={50}
-                            height={15}
-                            className="h-3.5 w-auto"
-                        />
-                        <p className="text-[#ffffff] text-sm font-medium text-center">
-                            SparkNest Tech Solutions (Pvt) Ltd
-                        </p>
-                    </div>
-                    <div className="text-[#ffffff] text-sm font-bold text-center mt-4">
-                        <a href="tel:+94762420318" className="hover:text-white transition-colors">Contact No : +94 76 242 0318</a>
-                    </div>
+                    <p className="text-[#ffffff] text-sm font-medium text-center">
+                        &copy; {new Date().getFullYear()} SM Medi Lab. All rights reserved.
+                    </p>
+                    <p className="text-white/40 text-xs text-center mt-1">
+                        Website by{" "}
+                        <a href="tel:+94762420318" className="hover:text-white/60 transition-colors">
+                            SparkNest Tech Solutions (Pvt) Ltd · +94 76 242 0318
+                        </a>
+                    </p>
                 </div>
             </div>
         </footer>

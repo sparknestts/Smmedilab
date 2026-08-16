@@ -1,10 +1,10 @@
 export const contactInfo = {
   contactNumbers: [
-    { number: "0761231229", label: "Jaffna - HQ" },
-    { number: "0777791229", label: "Trincomalee" }
+    { number: "0777791229", label: "Jaffna - HQ" },
+    { number: "0761231229", label: "Trincomalee" }
   ],
-  phone: "0761231229",
-  phoneHref: "tel:0761231229",
+  phone: "0777791229",
+  phoneHref: "tel:0777791229",
   whatsappHref: "#",
   email: "Info@smmedilab.com",
   emailHref: "mailto:Info@smmedilab.com",
@@ -27,9 +27,9 @@ export const formSubjects = [
 
 export const location = {
   title: "Our Flagship Diagnostics Center",
-  address: "452 Precision Avenue, Medical District, NY 10012",
+  address: "K.k.s rd, uppumada junction, kondavil, jaffna",
   facilityName: "Central Lab Facility",
   facilityDescription:
     "Full-service diagnostic center with on-site phlebotomy, rapid results, and physician consultation.",
-  directionsUrl: "https://maps.google.com",
+  directionsUrl: "https://maps.app.goo.gl/1L43egCcgGwABbp49",
 };

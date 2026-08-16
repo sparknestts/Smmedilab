@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import ServicesContent from "@/components/services/ServicesContent";
 
 export const metadata: Metadata = {
-  title: "Services - SM Medi Lab",
+  title: "Medical Lab Services in Jaffna | Blood Tests, DNA & More – SM Medi Lab",
   description:
-    "Explore SM Medi Lab's comprehensive catalog of laboratory services — routine screenings, specialized diagnostics, and wellness packages.",
+    "Explore SM Medi Lab's full range of laboratory services in Jaffna, Sri Lanka – blood tests, DNA analysis, urine tests, health packages & home sample collection. Fast, accurate results.",
+  alternates: { canonical: "https://www.smmedilab.com/services" },
+  openGraph: {
+    title: "Medical Lab Services in Jaffna | SM Medi Lab",
+    description: "Blood tests, DNA analysis, urine tests, health packages & home sample collection in Jaffna, Sri Lanka.",
+    url: "https://www.smmedilab.com/services",
+  },
 };
 
 export default function ServicesPage() {
@@ -16,7 +21,6 @@ export default function ServicesPage() {
       <main className="flex-grow">
         <ServicesContent />
       </main>
-      <Footer />
     </div>
   );
 }

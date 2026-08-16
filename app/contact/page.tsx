@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import ContactContent from "@/components/contact/ContactContent";
 
 export const metadata: Metadata = {
-  title: "Contact - SM Medi Lab",
+  title: "Contact SM Medi Lab | Book a Blood Test in Jaffna",
   description:
-    "Get in touch with SM Medi Lab for test inquiries, consultations, and appointment scheduling. Our diagnostic team is ready to assist you.",
+    "Contact SM Medi Lab in Jaffna, Sri Lanka to book blood tests, DNA analysis or home sample collection. Reach us by phone, WhatsApp or visit our lab in Kondavil, Jaffna.",
+  alternates: { canonical: "https://www.smmedilab.com/contact" },
+  openGraph: {
+    title: "Contact SM Medi Lab | Book a Blood Test in Jaffna",
+    description: "Book your blood test or home sample collection at SM Medi Lab, Jaffna. Contact us by phone or WhatsApp today.",
+    url: "https://www.smmedilab.com/contact",
+  },
 };
 
 export default function ContactPage() {
@@ -16,7 +21,6 @@ export default function ContactPage() {
       <main className="flex-grow">
         <ContactContent />
        </main>
-      <Footer />
     </div>
   );
 }
