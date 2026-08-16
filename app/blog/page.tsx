@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import BlogContent from "@/components/blog/BlogContent";
 
 export const metadata: Metadata = {
-  title: "Blog - SM Medi Lab",
+  title: "Health Blog | Medical Testing Insights – SM Medi Lab Jaffna",
   description:
-    "Expert perspectives on diagnostics, preventive care, and wellness from the SM Medi Lab clinical team.",
+    "Read expert articles on diagnostics, preventive care, blood tests, and health wellness from the clinical team at SM Medi Lab in Jaffna, Sri Lanka.",
+  alternates: { canonical: "https://www.smmedilab.com/blog" },
+  openGraph: {
+    title: "Health Blog | Medical Testing Insights – SM Medi Lab Jaffna",
+    description: "Expert perspectives on diagnostics and preventive care from SM Medi Lab.",
+    url: "https://www.smmedilab.com/blog",
+  },
 };
 
 export default function BlogPage() {
@@ -16,7 +21,6 @@ export default function BlogPage() {
       <main className="flex-grow">
         <BlogContent />
       </main>
-      <Footer />
     </div>
   );
 }

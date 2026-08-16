@@ -103,7 +103,7 @@ export default function Hero() {
               at Your Doorstep
             </h1>
             <p className="text-blue-100/80 text-base md:text-xl leading-relaxed max-w-2xl mx-auto mb-10">
-              Experience laboratory excellence delivered with editorial grace. We bring world-class diagnostics to your home, ensuring speed, accuracy, and comfort.
+              Accurate blood tests, DNA analysis & home sample collection — right here in Jaffna. Get fast digital reports and expert care you can trust.
             </p>
 
             {/* CTA Buttons */}

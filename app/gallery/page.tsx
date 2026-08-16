@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import GalleryContent from "@/components/gallery/GalleryContent";
 
 export const metadata: Metadata = {
-  title: "Gallery - SM Medi Lab",
+  title: "Lab Facilities & Gallery | SM Medi Lab Jaffna",
   description:
-    "Explore SM Medi Lab's state-of-the-art facilities, technology, and precision team through our visual gallery.",
+    "View the state-of-the-art facilities, advanced technology, and precision medical testing equipment at SM Medi Lab in Jaffna, Sri Lanka.",
+  alternates: { canonical: "https://www.smmedilab.com/gallery" },
+  openGraph: {
+    title: "Lab Facilities & Gallery | SM Medi Lab Jaffna",
+    description: "Explore SM Medi Lab's state-of-the-art diagnostic facilities in Jaffna.",
+    url: "https://www.smmedilab.com/gallery",
+  },
 };
 
 export default function GalleryPage() {
@@ -16,7 +21,6 @@ export default function GalleryPage() {
       <main className="flex-grow">
         <GalleryContent />
       </main>
-      <Footer />
     </div>
   );
 }

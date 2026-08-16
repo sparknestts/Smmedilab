@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import StatCounter from "@/components/StatCounter";
 import { useState } from "react";
 import ContactNumberChooser, { ChooserMode } from "@/components/ContactNumberChooser";
@@ -363,8 +362,6 @@ To deliver world-class laboratory diagnostics through advanced technology, exper
                 </section>
 
             </main>
-
-            <Footer />
 
             <ContactNumberChooser
                 open={chooserMode !== null}
