@@ -19,7 +19,7 @@ export default function HomeCollection() {
                     {/* Stat 1 */}
                     <div className="text-center space-y-2">
                         <div className="text-4xl lg:text-5xl font-bold tracking-tight text-white">
-                            <StatCounter end={2.5} decimals={1} suffix="M+" />
+                            <StatCounter end={50} decimals={0} suffix="K+" />
                         </div>
                         <div className="text-[10px] md:text-xs font-bold text-blue-200/80 tracking-[0.2em] uppercase">
                             Tests Performed
@@ -39,7 +39,7 @@ export default function HomeCollection() {
                     {/* Stat 3 */}
                     <div className="text-center space-y-2">
                         <div className="text-4xl lg:text-5xl font-bold tracking-tight text-white">
-                            <StatCounter end={150} suffix="+" />
+                            <StatCounter end={50} suffix="+" />
                         </div>
                         <div className="text-[10px] md:text-xs font-bold text-blue-200/80 tracking-[0.2em] uppercase">
                             Expert Clinicians
@@ -49,7 +49,7 @@ export default function HomeCollection() {
                     {/* Stat 4 */}
                     <div className="text-center space-y-2">
                         <div className="text-4xl lg:text-5xl font-bold tracking-tight text-white">
-                            <StatCounter end={12} />
+                            <StatCounter end={2} />
                         </div>
                         <div className="text-[10px] md:text-xs font-bold text-blue-200/80 tracking-[0.2em] uppercase">
                             Strategic Branches
