@@ -183,7 +183,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className="min-h-full flex flex-col"
+        className="min-h-full flex flex-col font-sans text-gray-800"
         style={{ touchAction: "manipulation", overflowX: "hidden", maxWidth: "100vw" }}
       >
         {children}

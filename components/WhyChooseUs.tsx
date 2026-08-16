@@ -10,7 +10,7 @@ const checklist = [
     "99.9% diagnostic accuracy rate verified by audits",
     "Fast digital results delivered within 12-24 hours",
     "Free post-report consultation with clinical lab experts",
-    "Professional, painless home collection collection service",
+    "Professional, painless home collection service",
     "Strict cold-chain logistics maintaining sample integrity"
 ];
 
@@ -52,7 +52,7 @@ export default function WhyChooseUs() {
                                 Why Choose SM Medi Lab?
                             </h2>
                             <p className="text-gray-500 text-base md:text-lg font-medium leading-relaxed">
-                                We combine technical expertise with editorial clinical grace to deliver diagnostic solutions that drive real clarity for your wellness journey.
+                                We combine technical expertise with compassionate care to deliver diagnostic solutions you can trust for your wellness journey.
                             </p>
                         </div>
 
