@@ -162,6 +162,39 @@ const jsonLd = {
       description: "Best Medical Laboratory in Jaffna, Sri Lanka",
       publisher: { "@id": `${siteUrl}/#organization` },
     },
+    {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "SiteNavigationElement",
+          "position": 1,
+          "name": "Services",
+          "description": "Explore our wide range of medical tests and health packages.",
+          "url": `${siteUrl}/services`
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 2,
+          "name": "Branches",
+          "description": "Find an SM Medi Lab location near you in Jaffna.",
+          "url": `${siteUrl}/branches`
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 3,
+          "name": "Contact",
+          "description": "Get in touch for home sample collection or inquiries.",
+          "url": `${siteUrl}/contact`
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 4,
+          "name": "About Us",
+          "description": "Learn about our commitment to medical accuracy.",
+          "url": `${siteUrl}/about`
+        }
+      ]
+    }
   ],
 };
 
