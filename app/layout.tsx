@@ -90,8 +90,13 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/favicon.ico", sizes: "any"
+        url: "/favicon.ico",
+        sizes: "any"
       },
+      {
+        url: "/logo.svg",
+        type: "image/svg+xml"
+      }
     ],
     apple: "/apple-icon.png",
   },
