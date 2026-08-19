@@ -1,4 +1,4 @@
-export type BranchStatus = "open" | "closed" | "opens-soon";
+export type BranchStatus = "open" | "closed" | "opens-soon" | "closes-soon";
 
 export type ServiceFilter = "all" | "blood" | "imaging" | "genomics";
 
@@ -41,9 +41,9 @@ export const branches: Branch[] = [
     address: "Jaffna-Kankesanturai Rd, Jaffna, Sri Lanka",
     status: "open",
     statusText: "OPEN NOW",
-    hours: "Mon–Fri: 06:00 AM – 09:00 PM",
-    weekdayHours: "Mon–Fri: 06:00 AM – 09:00 PM",
-    weekendHours: "Sat–Sun: 07:00 AM – 05:00 PM",
+    hours: "Mon–Sun: 06:30 AM – 09:00 PM",
+    weekdayHours: "Mon–Fri: 06:30 AM – 09:00 PM",
+    weekendHours: "Sat–Sun: 06:30 AM – 09:00 PM",
     phone: "+94 77 000 0000",
     services: ["all", "blood", "imaging", "genomics"],
     city: "Jaffna",
@@ -56,7 +56,9 @@ export const branches: Branch[] = [
     address: "531B, Nilaveli Road, Varothayanagar, Trincomalee",
     status: "open",
     statusText: "OPEN NOW",
-    hours: "Mon–Sat: 07:00 AM – 08:00 PM",
+    hours: "Mon–Sun: 06:30 AM – 09:00 PM",
+    weekdayHours: "Mon–Fri: 06:30 AM – 09:00 PM",
+    weekendHours: "Sat–Sun: 06:30 AM – 09:00 PM",
     phone: "+94 77 000 0001",
     services: ["all", "blood", "imaging"],
     city: "Trincomalee",
@@ -90,8 +92,12 @@ export function getStatusStyles(status: BranchStatus) {
     case "open":
       return "bg-[#80F98B] text-[#007327]";
     case "opens-soon":
-      return "bg-gray-100 text-gray-500";
+      return "bg-yellow-100 text-yellow-700";
+    case "closes-soon":
+      return "bg-orange-100 text-orange-600 border border-orange-200";
     case "closed":
+      return "bg-red-100 text-red-600";
+    default:
       return "bg-gray-100 text-gray-500";
   }
 }

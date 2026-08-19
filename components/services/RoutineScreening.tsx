@@ -5,6 +5,7 @@ import {
   type FilterCategory,
 } from "@/data/services";
 import Image from "next/image";
+import Link from "next/link";
 
 interface RoutineScreeningProps {
   filter: FilterCategory;
@@ -49,12 +50,12 @@ export default function RoutineScreening({
             {filteredRoutine.length > 0 && (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-stretch">
                 {filteredRoutine.map((service) => (
-                  <article
-                    key={service.id}
-                    id={service.id}
-                    className="bg-white p-6 md:p-8 rounded-3xl border border-slate-100 shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
-                  >
-                    <div className="space-y-4">
+                  <Link key={service.id} href={`/services/${service.id}`}>
+                    <article
+                      id={service.id}
+                      className="bg-white p-6 md:p-8 rounded-3xl border border-slate-100 shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group h-full"
+                    >
+                      <div className="space-y-4">
                       {service.image && (
                         <div className="bg-[#f0f4ff] p-3 rounded-2xl w-fit">
                           <Image
@@ -74,19 +75,14 @@ export default function RoutineScreening({
                       </p>
                     </div>
 
-                    <div className="mt-6 pt-4 border-t border-slate-50 flex items-center justify-between">
-                      <span className="text-[#008a3e] font-extrabold text-lg md:text-xl">
-                        {service.price}
-                      </span>
-                      <a
-                        href="/contact"
-                        className="text-[#002b5c] font-bold text-sm hover:text-[#003F87] transition-colors flex items-center gap-1.5 group-hover:translate-x-1 transition-transform"
-                      >
-                        Book Now
+                    <div className="mt-6 pt-4 border-t border-slate-50 flex items-center justify-end">
+                      <span className="text-[#002b5c] font-bold text-sm group-hover:text-[#003F87] flex items-center gap-1.5 group-hover:translate-x-1 transition-all">
+                        View Details
                         <span>&rarr;</span>
-                      </a>
+                      </span>
                     </div>
                   </article>
+                </Link>
                 ))}
               </div>
             )}
@@ -94,10 +90,13 @@ export default function RoutineScreening({
 
           {/* Featured Package Card */}
           {showFeatured && (
-            <aside
-              className={`bg-[#002b5c] text-white p-8 md:p-10 rounded-3xl shadow-xl flex flex-col justify-between min-h-[400px] lg:min-h-0 order-1 lg:order-2 ${filteredRoutine.length === 0 ? "lg:col-span-3 max-w-2xl mx-auto w-full" : ""
-                }`}
+            <Link 
+              href={`/services/${featuredPackage.id}`}
+              className={`order-1 lg:order-2 ${filteredRoutine.length === 0 ? "lg:col-span-3 max-w-2xl mx-auto w-full" : ""}`}
             >
+              <aside
+                className="bg-[#002b5c] text-white p-8 md:p-10 rounded-3xl shadow-xl flex flex-col justify-between min-h-[400px] lg:min-h-0 hover:shadow-2xl transition-all h-full group"
+              >
               <div className="space-y-6">
                 <span className="text-[#93C5FD] font-bold text-xs tracking-[0.2em] uppercase bg-white/10 px-3 py-1 rounded-full">
                   {featuredPackage.label}
@@ -129,13 +128,11 @@ export default function RoutineScreening({
                   ))}
                 </ul>
               </div>
-              <a
-                href="/contact"
-                className="mt-8 w-full text-center bg-white text-[#002b5c] font-bold py-4 rounded-xl hover:bg-slate-100 transition-all shadow-md"
-              >
-                Request Appointment
-              </a>
+              <div className="mt-8 w-full text-center bg-white text-[#002b5c] font-bold py-4 rounded-xl group-hover:bg-slate-100 transition-all shadow-md">
+                View Details
+              </div>
             </aside>
+          </Link>
           )}
 
         </div>

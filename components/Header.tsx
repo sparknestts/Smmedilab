@@ -21,7 +21,7 @@ const navLinks = [
   // { href: "/gallery", label: "Gallery" },
 ];
 
-export default function Header() {
+export default function Header({ forceSolid = false }: { forceSolid?: boolean }) {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [chooserMode, setChooserMode] = useState<ChooserMode | null>(null);
@@ -71,10 +71,13 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-12 ${scrolled
-          ? "bg-[#002b5c] text-white shadow-lg py-3.5 border-b border-blue-900/40 lg:block hidden"
-          : "bg-transparent text-white border-b border-white/10"
-          }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-12 ${
+          scrolled
+            ? "bg-[#002b5c] text-white shadow-lg py-3.5 border-b border-blue-900/40 lg:block hidden"
+            : forceSolid
+              ? "bg-[#002b5c] text-white shadow-lg border-b border-blue-900/40"
+              : "bg-transparent text-white border-b border-white/10"
+        }`}
       >
         <div className="flex items-center justify-between">
           <a href="/" className="flex items-center gap-2 shrink-0">

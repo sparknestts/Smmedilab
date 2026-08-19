@@ -75,7 +75,7 @@ export default function ConsultationForm() {
   }
 
   return (
-    <div className="bg-white rounded-[20px] md:rounded-[24px] shadow-sm border border-gray-100 p-6 md:p-10 lg:p-12">
+    <div id="booking-form" className="bg-white rounded-[20px] md:rounded-[24px] shadow-sm border border-gray-100 p-6 md:p-10 lg:p-12">
       <div className="mb-8">
         <h2 className="text-2xl md:text-3xl font-bold text-[#191C1D] mb-3">
           Request a Consultation

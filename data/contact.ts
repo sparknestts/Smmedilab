@@ -11,9 +11,7 @@ export const contactInfo = {
 };
 
 export const operatingHours = [
-  { days: "Monday — Friday", hours: "06:00 AM - 09:00 PM" },
-  { days: "Saturday", hours: "07:00 AM - 05:00 PM" },
-  { days: "Sunday", hours: "Emergency Only", highlight: true },
+  { days: "Monday — Sunday", hours: "06:30 AM - 09:00 PM", highlight: true }
 ];
 
 export const formSubjects = [

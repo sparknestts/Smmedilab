@@ -4,22 +4,7 @@ import {
   headquarters,
   otherBranches,
 } from "@/data/branches";
-
-function StatusBadge({
-  status,
-  text,
-}: {
-  status: "open" | "closed" | "opens-soon";
-  text: string;
-}) {
-  return (
-    <span
-      className={`inline-block text-[9px] sm:text-[10px] font-bold uppercase tracking-wider px-1.5 sm:px-3 py-1 rounded-full whitespace-nowrap ${getStatusStyles(status)}`}
-    >
-      {text}
-    </span>
-  );
-}
+import DynamicStatusBadge from "./DynamicStatusBadge";
 
 export default function BranchLocations() {
   return (
@@ -45,9 +30,9 @@ export default function BranchLocations() {
                   </svg>
                   <span>Main Headquarters</span>
                 </div>
-                <StatusBadge
-                  status={headquarters.status}
-                  text={headquarters.statusText}
+                <DynamicStatusBadge
+                  initialStatus={headquarters.status}
+                  initialText={headquarters.statusText}
                 />
               </div>
 
@@ -87,7 +72,7 @@ export default function BranchLocations() {
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 pt-8 mt-6 border-t border-slate-50">
               <a
-                href="/contact"
+                href="/contact#booking-form"
                 className="flex-1 text-center bg-[#003F87] hover:bg-[#002b5c] text-white font-bold px-6 py-3.5 rounded-xl transition-all shadow-sm text-sm"
               >
                 Book Appointment Here
@@ -115,9 +100,9 @@ export default function BranchLocations() {
                     <h3 className="text-xl font-bold text-[#002b5c]">
                       {branch.name}
                     </h3>
-                    <StatusBadge
-                      status={branch.status}
-                      text={branch.statusText}
+                    <DynamicStatusBadge
+                      initialStatus={branch.status}
+                      initialText={branch.statusText}
                     />
                   </div>
 
