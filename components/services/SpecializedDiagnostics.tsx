@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import { useState } from "react";
 import {
   matchesFilter,
@@ -94,7 +96,6 @@ export default function SpecializedDiagnostics({
   filter,
   searchQuery,
 }: SpecializedDiagnosticsProps) {
-  const [expandedId, setExpandedId] = useState<string | null>(null);
   const [showAll, setShowAll] = useState(false);
 
   const filtered = specializedServices.filter(
@@ -119,14 +120,11 @@ export default function SpecializedDiagnostics({
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
-          {displayItems.map((service) => {
-            const isExpanded = expandedId === service.id;
-            return (
-              <article
-                key={service.id}
-                onClick={() => setExpandedId(isExpanded ? null : service.id)}
-                className="bg-[#F3F4F5] border-l-4 border-[#002b5c] p-5 md:p-6 rounded-r-lg shadow-sm hover:shadow-md transition-all duration-300 flex flex-col min-h-[120px] cursor-pointer"
-              >
+          {displayItems.map((service) => (
+              <Link key={service.id} href={`/services/${service.id}`}>
+                <article
+                  className="bg-[#F3F4F5] border-l-4 border-[#002b5c] p-5 md:p-6 rounded-r-lg shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col min-h-[120px] cursor-pointer h-full"
+                >
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 mt-1">
                     {serviceIcons[service.id] || (
@@ -142,15 +140,10 @@ export default function SpecializedDiagnostics({
                 <p className="mt-3 text-[#424752] text-sm leading-relaxed flex-grow">
                   { service.description }
                 </p>
-               
-                {service.price && (
-                  <p className="mt-3 text-[#003F87] font-black text-lg md:text-xl">
-                    {service.price}
-                  </p>
-                )}
               </article>
-            );
-          })}
+              </Link>
+            )
+          )}
         </div>
 
         {filtered.length > 8 && (
