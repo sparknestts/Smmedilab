@@ -6,7 +6,7 @@ import ContactNumberChooser, { ChooserMode } from "@/components/ContactNumberCho
 import { contactInfo } from "@/data/contact";
 
 const checklist = [
-    "ISO accredited facilities meeting highest global guidelines",
+    "ISO Standards-Based Facilities Meeting Global Guidelines",
     "99.9% diagnostic accuracy rate verified by audits",
     "Fast digital results delivered within 12-24 hours",
     "Free post-report consultation with clinical lab experts",
