@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
 import ContactNumberChooser, { ChooserMode } from "@/components/ContactNumberChooser";
 import { contactInfo } from "@/data/contact";
@@ -124,14 +125,14 @@ export default function Hero() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </button>
-              <a
+              <Link
                 href="/services"
                 className="flex items-center justify-center gap-2 border-2 border-white/40 hover:bg-white hover:text-[#002b5c]
                 text-white px-8 py-4 rounded-lg font-bold text-[15px] md:text-[17px] 
                 transition-all w-full sm:w-auto"
               >
                 View All Packages
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -149,7 +150,7 @@ export default function Hero() {
             />
           </div>
           <div>
-            <div className="font-semibold text-gray-900 text-[11px] md:text-[15px] leading-tight">ISO Accredited</div>
+            <div className="font-semibold text-gray-900 text-[11px] md:text-[15px] leading-tight">ISO Standards Based</div>
             <div className="text-gray-500 text-[10px] md:text-[12px] font-medium">Global Standard Lab</div>
           </div>
         </div>

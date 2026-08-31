@@ -1,6 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from 'react';
 import ShareButton from './ShareButton';
+
 
 export default function Footer() {
     return (
@@ -11,7 +13,7 @@ export default function Footer() {
 
                     {/* Column 1: Brand & About */}
                     <div className="space-y-6">
-                        <h3 className="text-xl font-black uppercase tracking-widest text-[#ffffff]">SM Medical Lab</h3>
+                        <h3 className="text-xl font-black uppercase tracking-widest text-[#ffffff]">SM Medi Lab</h3>
                         <p className="text-blue-50/80 text-base leading-relaxed">
                             Pioneering diagnostic excellence with a focus on accuracy, speed, and patient-centric innovation. Your health, our science.
                         </p>
@@ -22,10 +24,10 @@ export default function Footer() {
                     <div className="space-y-6">
                         <h4 className="text-xl font-black uppercase tracking-widest text-[#ffffff]">Services</h4>
                         <ul className="space-y-4 text-blue-50/80 font-normal">
-                            <li><a href="/services" className="hover:text-blue-50/80 transition-colors">Blood Tests</a></li>
-                            <li><a href="/services" className="hover:text-blue-50/80 transition-colors">DNA Analysis</a></li>
-                            <li><a href="/services" className="hover:text-blue-50/80 transition-colors">Corporate Wellness</a></li>
-                            <li><a href="/services" className="hover:text-blue-50/80 transition-colors">Health Packages</a></li>
+                            <li><Link href="/services" className="hover:text-blue-50/80 transition-colors">Blood Tests</Link></li>
+                            <li><Link href="/services" className="hover:text-blue-50/80 transition-colors">DNA Analysis</Link></li>
+                            <li><Link href="/services" className="hover:text-blue-50/80 transition-colors">Corporate Wellness</Link></li>
+                            <li><Link href="/services" className="hover:text-blue-50/80 transition-colors">Health Packages</Link></li>
                         </ul>
                     </div>
 
@@ -33,10 +35,10 @@ export default function Footer() {
                     <div className="space-y-6">
                         <h4 className="text-xl font-black uppercase tracking-widest text-[#ffffff]">Company</h4>
                         <ul className="space-y-4 text-blue-50/80 font-medium">
-                            <li><a href="/about" className="hover:text-blue-50/80 transition-colors">About Us</a></li>
-                            <li><a href="/services" className="hover:text-blue-50/80 transition-colors">Services</a></li>
-                            <li><a href="/contact" className="hover:text-blue-50/80 transition-colors">Contact Us</a></li>
-                            <li><a href="/branches" className="hover:text-blue-50/80 transition-colors">Branches</a></li>
+                            <li><Link href="/about" className="hover:text-blue-50/80 transition-colors">About Us</Link></li>
+                            <li><Link href="/services" className="hover:text-blue-50/80 transition-colors">Services</Link></li>
+                            <li><Link href="/contact" className="hover:text-blue-50/80 transition-colors">Contact Us</Link></li>
+                            <li><Link href="/branches" className="hover:text-blue-50/80 transition-colors">Branches</Link></li>
                         </ul>
                     </div>
 
@@ -118,7 +120,7 @@ export default function Footer() {
                 <div className="md:hidden bg-[#002b5c] text-white -mx-6 px-6 py-10">
                     {/* Brand & About */}
                     <div className="text-left mb-6">
-                        <h3 className="text-2xl font-black uppercase tracking-widest text-[#ffffff] mb-4">SM Medical Lab</h3>
+                        <h3 className="text-2xl font-black uppercase tracking-widest text-[#ffffff] mb-4">SM Medi Lab</h3>
                         <p className="text-blue-50/80 text-sm leading-relaxed mb-6">
                             Pioneering diagnostic excellence with a focus on accuracy, speed, and patient-centric innovation. Your health, our science.
                         </p>
@@ -129,10 +131,10 @@ export default function Footer() {
                     <div className="space-y-3 mb-6">
                         <h4 className="text-left text-base font-bold uppercase tracking-widest text-[#ffffff]">Services</h4>
                         <ul className="space-y-2.5 text-blue-50/80 text-sm text-left">
-                            <li><a href="/services" className="hover:text-blue-50/80 transition-colors">Blood Tests</a></li>
-                            <li><a href="/services" className="hover:text-blue-50/80 transition-colors">DNA Analysis</a></li>
-                            <li><a href="/services" className="hover:text-blue-50/80 transition-colors">Corporate Wellness</a></li>
-                            <li><a href="/services" className="hover:text-blue-50/80 transition-colors">Health Packages</a></li>
+                            <li><Link href="/services" className="hover:text-blue-50/80 transition-colors">Blood Tests</Link></li>
+                            <li><Link href="/services" className="hover:text-blue-50/80 transition-colors">DNA Analysis</Link></li>
+                            <li><Link href="/services" className="hover:text-blue-50/80 transition-colors">Corporate Wellness</Link></li>
+                            <li><Link href="/services" className="hover:text-blue-50/80 transition-colors">Health Packages</Link></li>
                         </ul>
                     </div>
 
@@ -140,10 +142,9 @@ export default function Footer() {
                     <div className="space-y-3 mb-6">
                         <h4 className="text-left text-base font-bold uppercase tracking-widest text-[#ffffff]">Company</h4>
                         <ul className="space-y-2.5 text-blue-50/80 text-sm text-left">
-                            <li><a href="/about" className="hover:text-blue-50/80 transition-colors">About Us</a></li>
-                            <li><a href="/services" className="hover:text-blue-50/80 transition-colors">Our Services</a></li>
-                            <li><a href="/contact" className="hover:text-blue-50/80 transition-colors">Contact Us</a></li>
-                            <li><a href="/branches" className="hover:text-blue-50/80 transition-colors">Branches</a></li>
+                            <li><Link href="/about" className="hover:text-blue-50/80 transition-colors">About Us</Link></li>
+                            <li><Link href="/contact" className="hover:text-blue-50/80 transition-colors">Contact Us</Link></li>
+                            <li><Link href="/branches" className="hover:text-blue-50/80 transition-colors">Branches</Link></li>
                         </ul>
                     </div>
 
