@@ -23,7 +23,7 @@ export default function BlogHero() {
           Insights & Clinical Accuracy
         </h1>
         <p className="text-blue-100/80 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-          Detailed medical perspectives, diagnostic updates, and health guidance from the SM Medical Lab clinical team.
+          Detailed medical perspectives, diagnostic updates, and health guidance from the SM Medi Lab clinical team.
         </p>
       </div>
 

@@ -54,7 +54,7 @@ export const galleryImages = {
 
 export const galleryStats = [
   { value: "24/7", label: "Monitoring" },
-  { value: "ISO", label: "Certified" },
+  { value: "ISO", label: "Standards" },
 ];
 
 export const sequencingCard = {

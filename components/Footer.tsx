@@ -13,27 +13,41 @@ export default function Footer() {
 
                     {/* Column 1: Brand & About */}
                     <div className="space-y-6">
-                        <h3 className="text-xl font-black uppercase tracking-widest text-[#ffffff]">SM Medi Lab</h3>
+                        <div className="h-10 flex items-center">
+                            <Link href="/" className="flex items-center gap-3">
+                                <Image
+                                    src="/logo.svg"
+                                    alt="SM Medi Lab Logo"
+                                    width={40}
+                                    height={40}
+                                    className="h-10 w-auto object-contain"
+                                />
+                                <h3 className="text-xl font-black uppercase tracking-widest text-[#ffffff]">SM Medi Lab</h3>
+                            </Link>
+                        </div>
                         <p className="text-blue-50/80 text-base leading-relaxed">
                             Pioneering diagnostic excellence with a focus on accuracy, speed, and patient-centric innovation. Your health, our science.
                         </p>
-
                     </div>
 
                     {/* Column 2: Services */}
                     <div className="space-y-6">
-                        <h4 className="text-xl font-black uppercase tracking-widest text-[#ffffff]">Services</h4>
+                        <div className="h-10 flex items-center">
+                            <h4 className="text-base font-bold uppercase tracking-widest text-[#ffffff]">Services</h4>
+                        </div>
                         <ul className="space-y-4 text-blue-50/80 font-normal">
-                            <li><Link href="/services" className="hover:text-blue-50/80 transition-colors">Blood Tests</Link></li>
+                            <li><Link href="/services/blood" className="hover:text-blue-50/80 transition-colors">Blood Tests</Link></li>
                             <li><Link href="/services" className="hover:text-blue-50/80 transition-colors">DNA Analysis</Link></li>
-                            <li><Link href="/services" className="hover:text-blue-50/80 transition-colors">Corporate Wellness</Link></li>
-                            <li><Link href="/services" className="hover:text-blue-50/80 transition-colors">Health Packages</Link></li>
+                            <li><Link href="/services/executive-wellness" className="hover:text-blue-50/80 transition-colors">Corporate Wellness</Link></li>
+                            <li><Link href="/services/home-sample-collection" className="hover:text-blue-50/80 transition-colors">Health Packages</Link></li>
                         </ul>
                     </div>
 
                     {/* Column 3: Company */}
                     <div className="space-y-6">
-                        <h4 className="text-xl font-black uppercase tracking-widest text-[#ffffff]">Company</h4>
+                        <div className="h-10 flex items-center">
+                            <h4 className="text-base font-bold uppercase tracking-widest text-[#ffffff]">Company</h4>
+                        </div>
                         <ul className="space-y-4 text-blue-50/80 font-medium">
                             <li><Link href="/about" className="hover:text-blue-50/80 transition-colors">About Us</Link></li>
                             <li><Link href="/services" className="hover:text-blue-50/80 transition-colors">Services</Link></li>
@@ -44,7 +58,9 @@ export default function Footer() {
 
                     {/* Column 4: Contact */}
                     <div className="space-y-6">
-                        <h4 className="text-xl font-black uppercase tracking-widest text-[#ffffff]">Contact</h4>
+                        <div className="h-10 flex items-center">
+                            <h4 className="text-base font-bold uppercase tracking-widest text-[#ffffff]">Contact</h4>
+                        </div>
                         <ul className="space-y-4 text-blue-50/80 font-medium">
                             <li className="flex items-center gap-3">
                                 <svg className="w-5 h-5 text-[#ffffff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -120,27 +136,35 @@ export default function Footer() {
                 <div className="md:hidden bg-[#002b5c] text-white -mx-6 px-6 py-10">
                     {/* Brand & About */}
                     <div className="text-left mb-6">
-                        <h3 className="text-2xl font-black uppercase tracking-widest text-[#ffffff] mb-4">SM Medi Lab</h3>
+                        <Link href="/" className="flex items-center gap-3 mb-4">
+                            <Image
+                                src="/logo.svg"
+                                alt="SM Medi Lab Logo"
+                                width={36}
+                                height={36}
+                                className="h-9 w-auto object-contain"
+                            />
+                            <h3 className="text-2xl font-black uppercase tracking-widest text-[#ffffff]">SM Medi Lab</h3>
+                        </Link>
                         <p className="text-blue-50/80 text-sm leading-relaxed mb-6">
                             Pioneering diagnostic excellence with a focus on accuracy, speed, and patient-centric innovation. Your health, our science.
                         </p>
-
                     </div>
 
                     {/* Services Section */}
                     <div className="space-y-3 mb-6">
-                        <h4 className="text-left text-base font-bold uppercase tracking-widest text-[#ffffff]">Services</h4>
+                        <h4 className="text-left text-sm font-bold uppercase tracking-widest text-[#ffffff]">Services</h4>
                         <ul className="space-y-2.5 text-blue-50/80 text-sm text-left">
-                            <li><Link href="/services" className="hover:text-blue-50/80 transition-colors">Blood Tests</Link></li>
+                            <li><Link href="/services/blood" className="hover:text-blue-50/80 transition-colors">Blood Tests</Link></li>
                             <li><Link href="/services" className="hover:text-blue-50/80 transition-colors">DNA Analysis</Link></li>
-                            <li><Link href="/services" className="hover:text-blue-50/80 transition-colors">Corporate Wellness</Link></li>
-                            <li><Link href="/services" className="hover:text-blue-50/80 transition-colors">Health Packages</Link></li>
+                            <li><Link href="/services/executive-wellness" className="hover:text-blue-50/80 transition-colors">Corporate Wellness</Link></li>
+                            <li><Link href="/services/home-sample-collection" className="hover:text-blue-50/80 transition-colors">Health Packages</Link></li>
                         </ul>
                     </div>
 
                     {/* Company Section */}
                     <div className="space-y-3 mb-6">
-                        <h4 className="text-left text-base font-bold uppercase tracking-widest text-[#ffffff]">Company</h4>
+                        <h4 className="text-left text-sm font-bold uppercase tracking-widest text-[#ffffff]">Company</h4>
                         <ul className="space-y-2.5 text-blue-50/80 text-sm text-left">
                             <li><Link href="/about" className="hover:text-blue-50/80 transition-colors">About Us</Link></li>
                             <li><Link href="/contact" className="hover:text-blue-50/80 transition-colors">Contact Us</Link></li>
@@ -150,7 +174,7 @@ export default function Footer() {
 
                     {/* Contact Section */}
                     <div className="space-y-3 mb-6">
-                        <h4 className="text-left text-base font-bold uppercase tracking-widest text-[#ffffff]">Contact</h4>
+                        <h4 className="text-left text-sm font-bold uppercase tracking-widest text-[#ffffff]">Contact</h4>
                         <ul className="space-y-2.5 text-blue-50/80 text-sm text-left">
                             <li className="flex items-center justify-left gap-2">
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -7,7 +7,7 @@ export default function ScienceOfCertainty() {
                 </h2>
 
                 <p className="text-[#003F87] font-bold tracking-widest text-[#003F87] text-[11px] md:text-sm uppercase tracking-[0.2em] relative inline-block py-1">
-                    Accredited. Accurate. Accelerated.
+                    ISO Guidelines. Accurate. Accelerated.
                     <span className="absolute bottom-0 left-1/4 right-1/4 h-[2px] bg-[#003F87] rounded-full"></span>
                 </p>
 

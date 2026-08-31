@@ -23,7 +23,7 @@ export default function BranchesHero() {
           Clinical Precision, Local Care.
         </h1>
         <p className="text-blue-100/80 text-base md:text-xl leading-relaxed max-w-2xl mx-auto">
-          Find an SM Medical Lab branch near you. Our expanding network ensures world-class diagnostic services and home collections are always within reach.
+          Find an SM Medi Lab branch near you. Our expanding network ensures world-class diagnostic services and home collections are always within reach.
         </p>
       </div>
 

@@ -115,7 +115,7 @@ const jsonLd = {
       "@type": ["MedicalOrganization", "LocalBusiness"],
       "@id": `${siteUrl}/#organization`,
       name: "SM Medi Lab",
-      alternateName: ["SM Medical Lab", "SM Medi Laboratory", "SMMediLab"],
+      alternateName: ["SM Medi Lab", "SM Medi Laboratory", "SMMediLab"],
       url: siteUrl,
       logo: `${siteUrl}/logo.svg`,
       image: `${siteUrl}/logo.svg`,

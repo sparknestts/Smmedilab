@@ -16,8 +16,8 @@ const checklist = [
 
 const cards = [
     {
-        title: "Accredited Lab",
-        description: "Meeting global standards of clinical excellence and patient safety protocols.",
+        title: "ISO Standard Protocols",
+        description: "Following global ISO standards of clinical excellence and patient safety protocols.",
         icon: "/home_2.svg"
     },
     {

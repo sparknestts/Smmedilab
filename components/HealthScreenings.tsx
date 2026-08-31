@@ -1,10 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const screenings = [
     {
         title: "Blood Test",
         description: "Comprehensive hematology and biochemistry profiles for foundational health tracking.",
         category: "FOUNDATIONAL",
+        href: "/services/blood",
         bulletPoints: ["Full Blood Count", "Liver & Kidney Panels", "Glucose & Cholesterol", "Thyroid Profile"],
         icon: (
             <div>
@@ -22,6 +24,7 @@ const screenings = [
         title: "DNA Analysis",
         description: "Advanced genetic mapping for ancestry, wellness traits, and health predispositions.",
         category: "GENOMIC",
+        href: "/services",
         bulletPoints: ["Ancestry Mapping", "Wellness Traits", "Carrier Status", "Genetic Predispositions"],
         icon: (
             <div>
@@ -39,6 +42,7 @@ const screenings = [
         title: "Allergy Screening",
         description: "Precise IgE screenings for hundreds of food and environmental allergen triggers.",
         category: "IMMUNOLOGY",
+        href: "/services",
         bulletPoints: ["Food Allergens", "Environmental Triggers", "IgE Antibody Screen", "Post-Test Guidance"],
         icon: (
             <div>
@@ -56,6 +60,7 @@ const screenings = [
         title: "Corporate Wellness",
         description: "Customized health screening profiles and occupational medicine programs for enterprises.",
         category: "OCCUPATIONAL",
+        href: "/services/executive-wellness",
         bulletPoints: ["Executive Screens", "Pre-Employment", "Custom Panel Options", "Group Plan Bookings"],
         icon: (
             <div>
@@ -125,13 +130,13 @@ export default function HealthScreenings() {
                             </div>
 
                             <div className="flex items-center justify-between pt-8 mt-6 border-t border-slate-50 z-10">
-                                <a
-                                    href="/services"
+                                <Link
+                                    href={test.href}
                                     className="flex items-center gap-1.5 text-sm md:text-base font-bold text-[#002b5c] hover:text-[#003F87] group-hover:translate-x-1 transition-all"
                                 >
                                     Learn More
                                     <span className="text-xs group-hover:translate-x-1.5 transition-transform">&rarr;</span>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     ))}

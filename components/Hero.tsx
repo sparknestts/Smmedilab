@@ -143,15 +143,15 @@ export default function Hero() {
           <div className="p-1.5 md:p-2 rounded-full flex items-center justify-center">
             <Image
               src="/home_1.svg"
-              alt="ISO Accredited"
+              alt="ISO Guidelines Compliant"
               width={32}
               height={32}
               className="w-6 h-6 md:w-10 md:h-10"
             />
           </div>
           <div>
-            <div className="font-semibold text-gray-900 text-[11px] md:text-[15px] leading-tight">ISO Standards Based</div>
-            <div className="text-gray-500 text-[10px] md:text-[12px] font-medium">Global Standard Lab</div>
+            <div className="font-semibold text-gray-900 text-[11px] md:text-[15px] leading-tight">ISO Guidelines Compliant</div>
+            <div className="text-gray-500 text-[10px] md:text-[12px] font-medium">Following Global Standards</div>
           </div>
         </div>
 

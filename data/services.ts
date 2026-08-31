@@ -62,18 +62,28 @@ export const routineServices: RoutineService[] = [
 ];
 
 export const featuredPackage = {
-  id: "featured",
-  label: "Featured Package",
-  title: "Executive Wellness Annual Panel",
+  id: "home-sample-collection",
+  label: "Primary Flagship Service",
+  title: "Home Sample Collection",
   description:
-    "A comprehensive annual health assessment designed for busy professionals who demand precision and convenience.",
+    "Professional, hygienic, and convenient sample collection right from your home or office by trained medical lab phlebotomists.",
   features: [
-    "85+ Clinical Parameters",
-    "Physician Consultation",
-    "Personalized Health Report",
-    "Priority Sample Collection",
+    "Doorstep Sample Pickup",
+    "Qualified & Experienced Phlebotomists",
+    "Sterile & Hygienic Equipment",
+    "Cold-Chain Logistics Box",
+    "Fast Digital Reports via WhatsApp/Email",
   ],
-  category: "wellness" as ServiceCategory,
+  category: "routine" as ServiceCategory,
+  testDetails:
+    "Our home sample collection service brings world-class diagnostic convenience straight to your doorstep. Highly trained medical lab technicians visit your home or workplace at your scheduled time with sterile sampling kits and cold-chain sample preservation boxes. All diagnostic reports are processed quickly and delivered directly to your phone.",
+  preparation: [
+    "Choose your required blood or urine tests",
+    "Schedule your preferred date & time slot for home collection",
+    "Follow test-specific fasting instructions if required (e.g. FBS or Lipid Profile)",
+    "Be available at the scheduled address during your time slot"
+  ],
+  turnaroundTime: "Same Day / Within 12-24 hours digitally",
 };
 
 export const specializedServices: SpecializedService[] = [
@@ -256,6 +266,19 @@ export const specializedServices: SpecializedService[] = [
       "No fasting required"
     ],
     turnaroundTime: "Within 24 hours",
+  },
+  {
+    id: "executive-wellness",
+    title: "Executive Wellness Panel",
+    description: "Comprehensive health assessment panel designed for busy professionals.",
+    price: "",
+    category: "wellness",
+    testDetails: "Comprehensive annual health assessment covering 85+ clinical parameters including FBC, Lipid Profile, Liver Function (LFT), Renal Function (RFT), and Glucose levels.",
+    preparation: [
+      "10-12 hours fasting required",
+      "Avoid alcohol 24 hours prior to sample collection"
+    ],
+    turnaroundTime: "Within 24 hours",
   }
 ];
 
@@ -277,7 +300,10 @@ export function getAllServices(): AnyService[] {
 }
 
 export function getServiceById(id: string): AnyService | undefined {
-  if (id === "executive-wellness-annual-panel" || id === "featured") {
+  if (
+    id === "home-sample-collection" ||
+    id === "featured"
+  ) {
     return featuredPackage;
   }
   

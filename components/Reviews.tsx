@@ -9,7 +9,7 @@ const reviews = [
     {
         name: "Dr. James Wilson",
         test: "Genetic Screening",
-        text: '"I\'ve used many labs, but SM Medical stands out for their clarity. The way the reports are presented makes it so easy to understand what\'s actually going on with my health."',
+        text: '"I\'ve used many labs, but SM Medi Lab stands out for their clarity. The way the reports are presented makes it so easy to understand what\'s actually going on with my health."',
     },
     {
         name: "Marcus Chen",

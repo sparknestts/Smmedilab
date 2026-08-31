@@ -13,7 +13,7 @@ export default function BranchesCTA() {
             Can&apos;t make it to a branch?
           </h2>
           <p className="text-blue-100/80 text-base md:text-lg leading-relaxed">
-            We offer home collection services for diagnostic tests. Our certified phlebotomists come to you with the same clinical precision expected in our labs.
+            We offer home collection services for diagnostic tests. Our qualified phlebotomists come to you with the same clinical precision expected in our labs.
           </p>
         </div>
 

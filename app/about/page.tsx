@@ -53,8 +53,8 @@ export default function AboutPage() {
 
     const achievements = [
         {
-            title: "Industry Recognition",
-            description: "Accredited by ISO 15189 international guidelines for diagnostics and professional medical standards.",
+            title: "ISO Quality Standards",
+            description: "Operating in accordance with ISO 15189 international quality guidelines for diagnostics and medical standards.",
             icon: "/home_2.svg"
         },
         {
@@ -120,7 +120,7 @@ export default function AboutPage() {
                                 </h2>
                             </div>
                             <p className="text-gray-600 text-sm md:text-base font-semibold leading-relaxed">
-                                SM Medical Lab was founded in 2013 with a vision to bridge the gap between scientific accuracy and patient wellness. Over the past decade, we have grown into a trusted diagnostics partner.
+                                SM Medi Lab was founded in 2013 with a vision to bridge the gap between scientific accuracy and patient wellness. Over the past decade, we have grown into a trusted diagnostics partner.
                             </p>
                             <p className="text-gray-500 text-sm md:text-base font-medium leading-relaxed">
                                 We combine state-of-the-art pathology instruments with highly experienced clinicians to deliver diagnostics delivered with clinical grace and surgical accuracy. From simple blood counts to advanced genetic indices, we ensure every test result supports confident clinical decisions.
@@ -241,7 +241,7 @@ To deliver world-class laboratory diagnostics through advanced technology, exper
                                     Our Achievements
                                 </h2>
                                 <p className="text-gray-500 text-sm md:text-base font-semibold leading-relaxed">
-                                    We are proud of our certifications, partnerships, and achievements. They reflect our continuous commitment to medical lab excellence.
+                                    We are proud of our quality standards, operational excellence, and achievements. They reflect our continuous commitment to medical lab excellence.
                                 </p>
                             </div>
 
@@ -252,7 +252,7 @@ To deliver world-class laboratory diagnostics through advanced technology, exper
                                 </li>
                                 <li className="flex items-start gap-4">
                                     <span className="w-2 h-2 rounded-full bg-[#003F87] mt-2.5"></span>
-                                    <span>Gold standard ISO 15189 credential accreditation</span>
+                                    <span>Following gold standard ISO 15189 quality guidelines</span>
                                 </li>
                                 <li className="flex items-start gap-4">
                                     <span className="w-2 h-2 rounded-full bg-[#003F87] mt-2.5"></span>
